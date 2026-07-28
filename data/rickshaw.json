@@ -1,0 +1,35 @@
+[
+  {
+    "id": "rickshaw_intro",
+    "character": "rickshaw",
+    "type": "intro",
+    "text": "[Placeholder] You are a rickshaw puller..."
+  },
+  {
+    "id": "rickshaw_phase1",
+    "character": "rickshaw",
+    "type": "phase",
+    "phase": 1,
+    "image": "",
+    "text": "[Placeholder Phase 1] The streets are tense today.",
+    "choices": [
+      {
+        "label": "Ferry protestors for free",
+        "next_id": "rickshaw_phase2",
+        "state_effect": { "risk": 1, "helped": 1 }
+      },
+      {
+        "label": "Avoid the protest areas",
+        "next_id": "rickshaw_phase2",
+        "state_effect": {}
+      }
+    ]
+  },
+  {
+    "id": "rickshaw_ending_default",
+    "character": "rickshaw",
+    "type": "ending",
+    "condition": "default",
+    "text": "[Placeholder] Rickshaw default ending."
+  }
+]

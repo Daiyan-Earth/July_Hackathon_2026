@@ -1,0 +1,49 @@
+[
+  {
+    "id": "doctor_intro",
+    "character": "doctor",
+    "type": "intro",
+    "text": "[Placeholder] You are a doctor working at a busy public hospital. The protests are just beginning, but you already feel the tension in the emergency room."
+  },
+  {
+    "id": "doctor_phase1",
+    "character": "doctor",
+    "type": "phase",
+    "phase": 1,
+    "image": "",
+    "text": "[Placeholder Phase 1: Calm Before] A group of injured students is brought in. The authorities demand you report their names.",
+    "choices": [
+      {
+        "label": "Treat them quietly, don't report",
+        "next_id": "doctor_phase2",
+        "state_effect": { "helped": 1, "risk": 1 }
+      },
+      {
+        "label": "Report them as instructed",
+        "next_id": "doctor_phase2",
+        "state_effect": { "risk": 0 }
+      }
+    ]
+  },
+  {
+    "id": "doctor_ending_quiet",
+    "character": "doctor",
+    "type": "ending",
+    "condition": "default",
+    "text": "[Placeholder Ending: Quiet Survival] You kept your head down. You survived, but the memories of those you couldn't help will linger."
+  },
+  {
+    "id": "doctor_ending_impact",
+    "character": "doctor",
+    "type": "ending",
+    "condition": "helped>=1",
+    "text": "[Placeholder Ending: Impact] Your actions saved lives. It wasn't easy, but your quiet resistance made a difference."
+  },
+  {
+    "id": "doctor_ending_cost",
+    "character": "doctor",
+    "type": "ending",
+    "condition": "risk>=2",
+    "text": "[Placeholder Ending: Cost] The risks you took caught up with you. You were detained, facing severe consequences for your principles."
+  }
+]

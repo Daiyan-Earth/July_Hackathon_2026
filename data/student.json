@@ -1,0 +1,35 @@
+[
+  {
+    "id": "student_intro",
+    "character": "student",
+    "type": "intro",
+    "text": "[Placeholder] You are a university student..."
+  },
+  {
+    "id": "student_phase1",
+    "character": "student",
+    "type": "phase",
+    "phase": 1,
+    "image": "",
+    "text": "[Placeholder Phase 1] The campus is buzzing with talks of protest.",
+    "choices": [
+      {
+        "label": "Join the organizers",
+        "next_id": "student_phase2",
+        "state_effect": { "risk": 1, "helped": 1 }
+      },
+      {
+        "label": "Stay in your dorm",
+        "next_id": "student_phase2",
+        "state_effect": {}
+      }
+    ]
+  },
+  {
+    "id": "student_ending_default",
+    "character": "student",
+    "type": "ending",
+    "condition": "default",
+    "text": "[Placeholder] Student default ending."
+  }
+]

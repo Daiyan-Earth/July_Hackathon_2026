@@ -11,7 +11,7 @@
     "type": "phase",
     "phase": 1,
     "image": "",
-    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A weathered rickshaw puller navigating a chaotic street filled with running protesters.",
+    "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A weathered rickshaw puller navigating a chaotic street filled with running protesters.",
     "text": "The streets are growing tense. You see a group of students running away from baton-wielding police. One student trips near your rickshaw and begs for a ride to safety.",
     "choices": [
       {
@@ -19,7 +19,7 @@
         "next_id": "rickshaw_phase2",
         "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller pedaling furiously with a student in the back, police officers shouting in the background.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller pedaling furiously with a student in the back, police officers shouting in the background.",
         "consequence_text": "You pedal hard, carrying the student away from danger. Your muscles ache, but they thank you profusely."
       },
       {
@@ -27,7 +27,7 @@
         "next_id": "rickshaw_phase2",
         "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller sadly parking his vehicle in a narrow, empty alleyway.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller sadly parking his vehicle in a narrow, empty alleyway.",
         "consequence_text": "You park the rickshaw early. You make no money today, meaning a meager dinner for your family."
       }
     ]
@@ -38,7 +38,7 @@
     "type": "phase",
     "phase": 2,
     "image": "",
-    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A desolate Dhaka intersection during a blackout, a single rickshaw visible in the gloom.",
+    "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A desolate Dhaka intersection during a blackout, a single rickshaw visible in the gloom.",
     "text": "The internet blackout begins, and all motorized transport is halted. The city is eerily quiet, punctuated only by distant sirens. Ambulances are blocked by barricades.",
     "choices": [
       {
@@ -46,7 +46,7 @@
         "next_id": "rickshaw_phase3",
         "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw transporting a bleeding youth, the puller navigating a makeshift barricade.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw transporting a bleeding youth, the puller navigating a makeshift barricade.",
         "consequence_text": "You transport a bleeding student to a clinic, dodging checkpoints. The blood stains the seat, but you saved a life."
       },
       {
@@ -54,7 +54,7 @@
         "next_id": "rickshaw_phase3",
         "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw covered by a torn blue tarp in a dark slum alley.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw covered by a torn blue tarp in a dark slum alley.",
         "consequence_text": "You cover your livelihood with a tarp, hoping the clashes don't reach your neighborhood."
       }
     ]
@@ -65,7 +65,7 @@
     "type": "phase",
     "phase": 3,
     "image": "",
-    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Locals dismantling a construction site to build a street barricade, tires burning.",
+    "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Locals dismantling a construction site to build a street barricade, tires burning.",
     "text": "Clashes intensify near your slum. Protesters are setting up barricades to prevent armored vehicles from entering the narrow streets.",
     "choices": [
       {
@@ -73,7 +73,7 @@
         "next_id": "rickshaw_phase4",
         "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller dragging a heavy piece of corrugated metal to add to a burning barricade.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller dragging a heavy piece of corrugated metal to add to a burning barricade.",
         "consequence_text": "You drag metal sheets and tires into the street. The unity among the crowd gives you courage."
       },
       {
@@ -81,7 +81,7 @@
         "next_id": "rickshaw_phase4",
         "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A family huddled together in a small tin-roofed shack, sharing a small bowl of rice.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A family huddled together in a small tin-roofed shack, sharing a small bowl of rice.",
         "consequence_text": "You share a handful of rice with your neighbors, listening to distant gunshots in fear."
       }
     ]
@@ -92,7 +92,7 @@
     "type": "phase",
     "phase": 4,
     "image": "",
-    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A massive, unstoppable crowd of ordinary citizens marching towards the capital center.",
+    "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A massive, unstoppable crowd of ordinary citizens marching towards the capital center.",
     "text": "It is the final day. Millions of people from all classes are marching towards the square. The oppressive regime is crumbling.",
     "choices": [
       {
@@ -100,7 +100,7 @@
         "next_id": "rickshaw_ending",
         "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller walking shoulder-to-shoulder with students and professionals, chanting loudly.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller walking shoulder-to-shoulder with students and professionals, chanting loudly.",
         "consequence_text": "You leave the rickshaw behind and walk with the masses, shouting for a better future for your children."
       },
       {
@@ -108,7 +108,7 @@
         "next_id": "rickshaw_ending",
         "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller sitting by a small battery-powered radio, listening intently.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller sitting by a small battery-powered radio, listening intently.",
         "consequence_text": "You sit by the radio, waiting to hear if the country has truly changed."
       }
     ]

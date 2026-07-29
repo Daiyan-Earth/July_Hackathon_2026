@@ -11,7 +11,7 @@
     "type": "phase",
     "phase": 1,
     "image": "",
-    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A tense, overcrowded emergency room in Dhaka, a female doctor looking overwhelmed but resolute.",
+    "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A tense, overcrowded emergency room in Dhaka, a female doctor looking overwhelmed but resolute.",
     "text": "The first wave of injured students is brought in. They are bleeding and scared. The authorities demand you log their real names and report them immediately.",
     "choices": [
       {
@@ -19,7 +19,7 @@
         "next_id": "doctor_phase2",
         "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor bandaging a student's arm in a dimly lit, secluded hospital corridor.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor bandaging a student's arm in a dimly lit, secluded hospital corridor.",
         "consequence_text": "You bandage them in a back ward. If the authorities check the logs, you will be held responsible."
       },
       {
@@ -27,7 +27,7 @@
         "next_id": "doctor_phase2",
         "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor reluctantly writing in a hospital ledger while armed police stand in the background.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor reluctantly writing in a hospital ledger while armed police stand in the background.",
         "consequence_text": "You log their details. A cold sense of guilt washes over you as police wait outside the ER."
       }
     ]
@@ -38,7 +38,7 @@
     "type": "phase",
     "phase": 2,
     "image": "",
-    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A hospital courtyard at night, tear gas drifting in the air, medics rushing with supplies.",
+    "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A hospital courtyard at night, tear gas drifting in the air, medics rushing with supplies.",
     "text": "The hospital is overwhelmed, and supplies are running desperately low. Tear gas drifts into the corridors. Street medic camps outside are begging for gauze and saline.",
     "choices": [
       {
@@ -46,7 +46,7 @@
         "next_id": "doctor_phase3",
         "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor sneaking boxes of medical supplies through a chain-link fence to waiting volunteers.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor sneaking boxes of medical supplies through a chain-link fence to waiting volunteers.",
         "consequence_text": "You sneak out with gauze and saline. A stray tear gas canister forces you to run back inside coughing."
       },
       {
@@ -54,7 +54,7 @@
         "next_id": "doctor_phase3",
         "state_effect": { "helped": 1, "risk": 0 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor frantically working on a patient in a chaotic emergency room.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor frantically working on a patient in a chaotic emergency room.",
         "consequence_text": "You work frantically, saving lives within the safety of the hospital walls."
       }
     ]
@@ -65,7 +65,7 @@
     "type": "phase",
     "phase": 3,
     "image": "",
-    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Armed officers marching down a hospital hallway, medical staff looking on in fear.",
+    "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Armed officers marching down a hospital hallway, medical staff looking on in fear.",
     "text": "Authorities storm the hospital demanding you hand over protesters hiding in the wards. They threaten to revoke your medical license if you obstruct them.",
     "choices": [
       {
@@ -73,7 +73,7 @@
         "next_id": "doctor_phase4",
         "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor ushering wounded youths into a cramped locker room, finger to her lips signaling silence.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor ushering wounded youths into a cramped locker room, finger to her lips signaling silence.",
         "consequence_text": "You quickly usher wounded students into a locked locker room, sweating as officers march past."
       },
       {
@@ -81,7 +81,7 @@
         "next_id": "doctor_phase4",
         "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor looking away in shame as officers drag injured youths out of a hospital bed.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor looking away in shame as officers drag injured youths out of a hospital bed.",
         "consequence_text": "You look away as officers drag injured youths away. The shame is unbearable."
       }
     ]
@@ -92,7 +92,7 @@
     "type": "phase",
     "phase": 4,
     "image": "",
-    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. An exhausted doctor leaning against a hospital wall, early morning light filtering through a window.",
+    "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. An exhausted doctor leaning against a hospital wall, early morning light filtering through a window.",
     "text": "Victory seems near, but the final clashes are brutal. You have been awake for over 30 hours, and a new surge of critically injured patients is arriving.",
     "choices": [
       {
@@ -100,7 +100,7 @@
         "next_id": "doctor_ending",
         "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor with dark circles under her eyes, determinedly stitching a wound under bright surgical lights.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor with dark circles under her eyes, determinedly stitching a wound under bright surgical lights.",
         "consequence_text": "Your vision blurs from exhaustion, but you stitch another wound. You refuse to abandon your post."
       },
       {
@@ -108,7 +108,7 @@
         "next_id": "doctor_ending",
         "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor walking home through debris-littered streets in the early dawn.",
+        "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor walking home through debris-littered streets in the early dawn.",
         "consequence_text": "You walk home through debris-littered streets, praying the worst is over."
       }
     ]

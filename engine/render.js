@@ -8,10 +8,13 @@ const Render = {
     titleScreen(onStart) {
         this.clear();
         this.root.innerHTML = `
-            <div class="screen">
-                <h1>July Revolution</h1>
-                <p class="text-content" style="text-align: center;">An interactive fiction exploring the micro-histories of the July Revolution.</p>
-                <button id="start-btn">Begin Journey</button>
+            <div class="screen title-screen">
+                <div class="title-screen-bg"></div>
+                <div class="content-wrapper">
+                    <h1 class="main-title">JULY REVOLUTION</h1>
+                    <p class="subtitle">An Interactive Historical Fiction Experience</p>
+                    <button id="start-btn" class="btn-primary">Begin Journey</button>
+                </div>
             </div>
         `;
         document.getElementById('start-btn').onclick = onStart;
@@ -19,11 +22,20 @@ const Render = {
 
     introScreen(node, onNext) {
         this.clear();
+        const text = node ? node.text : 'Error loading intro.';
         this.root.innerHTML = `
             <div class="screen">
-                <h2>Introduction</h2>
-                <div class="text-content">${node ? node.text : 'Error loading intro.'}</div>
-                <button id="next-btn">Continue</button>
+                <div class="scene-image-container">
+                    <div class="image-fallback">Introduction</div>
+                </div>
+                <div class="dialogue-panel">
+                    <h2 class="character-name-display">PROLOGUE</h2>
+                    <div class="metadata-display">📍 Dhaka • 🗓 July 2024</div>
+                    <div class="narration-content">${text}</div>
+                </div>
+                <div class="choices-panel text-center">
+                    <button id="next-btn" class="btn-primary">Continue</button>
+                </div>
             </div>
         `;
         document.getElementById('next-btn').onclick = onNext;
@@ -33,26 +45,54 @@ const Render = {
         this.clear();
         this.root.innerHTML = `
             <div class="screen">
-                <h2>Select Character</h2>
+                <h2 class="character-select-title">SELECT YOUR PATH</h2>
                 <div class="character-grid">
-                    <div class="character-card" data-char="doctor">Doctor</div>
-                    <div class="character-card" data-char="student">Student</div>
-                    <div class="character-card" data-char="rickshaw">Rickshaw Puller</div>
+                    <div class="save-slot-card" data-char="doctor">
+                        <div class="portrait-placeholder">🩺</div>
+                        <h3 class="save-slot-title">DOCTOR</h3>
+                        <div class="save-slot-desc">Emergency Physician</div>
+                    </div>
+                    <div class="save-slot-card" data-char="student">
+                        <div class="portrait-placeholder">🎓</div>
+                        <h3 class="save-slot-title">STUDENT</h3>
+                        <div class="save-slot-desc">Undergraduate Protestor</div>
+                    </div>
+                    <div class="save-slot-card" data-char="rickshaw">
+                        <div class="portrait-placeholder">🚲</div>
+                        <h3 class="save-slot-title">RICKSHAW PULLER</h3>
+                        <div class="save-slot-desc">Navigating the Streets</div>
+                    </div>
                 </div>
             </div>
         `;
-        document.querySelectorAll('.character-card').forEach(el => {
+        document.querySelectorAll('.save-slot-card').forEach(el => {
             el.onclick = () => onSelect(el.dataset.char);
         });
     },
 
     characterIntroScreen(node, onNext) {
         this.clear();
+        const char = (node && node.character) ? node.character : 'character';
+        const charName = char.toUpperCase();
+        
+        let locationStr = "Dhaka";
+        if (char === 'doctor') locationStr = "Dhaka Medical College";
+        if (char === 'student') locationStr = "Dhaka University Campus";
+        if (char === 'rickshaw') locationStr = "Mirpur Road";
+
         this.root.innerHTML = `
             <div class="screen">
-                <h2>${(node && node.character) ? node.character.toUpperCase() : 'CHARACTER'}</h2>
-                <div class="text-content">${node ? node.text : 'Error loading character intro.'}</div>
-                <button id="next-btn">Begin Phase 1</button>
+                <div class="scene-image-container">
+                    <div class="image-fallback">${charName}</div>
+                </div>
+                <div class="dialogue-panel">
+                    <h2 class="character-name-display">${charName}</h2>
+                    <div class="metadata-display">📍 ${locationStr} • 🗓 15 July 2024</div>
+                    <div class="narration-content">${node ? node.text : 'Error loading.'}</div>
+                </div>
+                <div class="choices-panel text-center">
+                    <button id="next-btn" class="btn-primary">Begin Phase 1</button>
+                </div>
             </div>
         `;
         document.getElementById('next-btn').onclick = onNext;
@@ -61,36 +101,42 @@ const Render = {
     phaseScreen(node, onChoice) {
         this.clear();
         
-        const imgHtml = (node && node.image) ? `<img src="${node.image}" class="scene-image" alt="Phase Image">` : '';
+        const imgHtml = (node && node.image) 
+            ? `<img src="${node.image}" class="scene-image" alt="Phase Image" onerror="this.outerHTML='<div class=\\'image-fallback\\'>Scene Illustration Missing</div>'">` 
+            : `<div class="image-fallback">Scene Illustration Missing</div>`;
+            
         const choicesHtml = (node && node.choices) ? node.choices.map((c, idx) => `
-            <button data-idx="${idx}">${c.label}</button>
+            <button class="choice-btn" data-idx="${idx}">
+                <span class="choice-label">${c.label}</span>
+            </button>
         `).join('') : '';
 
         const char = typeof AppState !== 'undefined' && AppState.character ? AppState.character : 'character';
-        const charName = char.charAt(0).toUpperCase() + char.slice(1);
+        const charName = char.toUpperCase();
         const phase = typeof AppState !== 'undefined' && AppState.phase ? AppState.phase : 1;
         const dateStr = (14 + phase) + " July 2024";
-        let locationStr = "Dhaka, Bangladesh";
+        let locationStr = "Dhaka";
         if (char === 'doctor') locationStr = "Dhaka Medical College";
         if (char === 'student') locationStr = "Dhaka University Campus";
         if (char === 'rickshaw') locationStr = "Mirpur Road";
 
         this.root.innerHTML = `
-            <div class="screen scene-layout">
-                ${imgHtml}
-                <div class="scene-header">
-                    <h2 class="character-name">${charName}</h2>
-                    <div class="scene-meta">📍 ${locationStr} • ${dateStr}</div>
+            <div class="screen">
+                <div class="scene-image-container">
+                    ${imgHtml}
                 </div>
-                <div class="narration">${node ? node.text : 'Error loading phase.'}</div>
-                <hr class="scene-divider">
-                <div class="choices-container">
+                <div class="dialogue-panel">
+                    <h2 class="character-name-display">${charName}</h2>
+                    <div class="metadata-display">📍 ${locationStr} • 🗓 ${dateStr}</div>
+                    <div class="narration-content">${node ? node.text : 'Error loading phase.'}</div>
+                </div>
+                <div class="choices-panel">
                     ${choicesHtml}
                 </div>
             </div>
         `;
         
-        document.querySelectorAll('.choices-container button').forEach(btn => {
+        document.querySelectorAll('.choices-panel button').forEach(btn => {
             btn.onclick = () => {
                 const choice = node.choices[btn.dataset.idx];
                 onChoice(choice);
@@ -101,29 +147,23 @@ const Render = {
     consequenceScreen(consequence, onContinue) {
         this.clear();
         
-        const imgHtml = (consequence && consequence.image) ? `<img src="${consequence.image}" class="scene-image" alt="Consequence Image">` : '';
+        const imgHtml = (consequence && consequence.image) 
+            ? `<img src="${consequence.image}" class="scene-image consequence-image" alt="Consequence Image" onerror="this.outerHTML='<div class=\\'image-fallback\\'>Scene Illustration Missing</div>'">` 
+            : `<div class="image-fallback">Scene Illustration Missing</div>`;
+            
         const textHtml = (consequence && consequence.text) ? consequence.text : 'Error loading consequence.';
 
-        const char = typeof AppState !== 'undefined' && AppState.character ? AppState.character : 'character';
-        const charName = char.charAt(0).toUpperCase() + char.slice(1);
-        const phase = typeof AppState !== 'undefined' && AppState.phase ? AppState.phase : 1;
-        const dateStr = (14 + phase) + " July 2024";
-        let locationStr = "Dhaka, Bangladesh";
-        if (char === 'doctor') locationStr = "Dhaka Medical College";
-        if (char === 'student') locationStr = "Dhaka University Campus";
-        if (char === 'rickshaw') locationStr = "Mirpur Road";
-
         this.root.innerHTML = `
-            <div class="screen scene-layout consequence-layout">
-                ${imgHtml}
-                <div class="scene-header">
-                    <h2 class="character-name">${charName}</h2>
-                    <div class="scene-meta">📍 ${locationStr} • ${dateStr}</div>
+            <div class="screen">
+                <div class="scene-image-container">
+                    ${imgHtml}
                 </div>
-                <div class="narration">${textHtml}</div>
-                <hr class="scene-divider">
-                <div class="choices-container">
-                    <button id="continue-btn">Continue</button>
+                <div class="dialogue-panel consequence-overlay">
+                    <h2 class="character-name-display" style="color: #ccc;">CONSEQUENCE</h2>
+                    <div class="narration-content">${textHtml}</div>
+                </div>
+                <div class="choices-panel text-center">
+                    <button id="continue-btn" class="btn-primary">Continue</button>
                 </div>
             </div>
         `;
@@ -133,11 +173,24 @@ const Render = {
 
     endingScreen(node, onNext) {
         this.clear();
+        
+        const imgHtml = (node && node.image) 
+            ? `<img src="${node.image}" class="scene-image" alt="Ending Image" onerror="this.outerHTML='<div class=\\'image-fallback\\'>Ending Illustration Missing</div>'">` 
+            : `<div class="image-fallback">Ending Illustration Missing</div>`;
+
         this.root.innerHTML = `
             <div class="screen">
-                <h2>Ending</h2>
-                <div class="text-content">${node ? node.text : 'Error loading ending.'}</div>
-                <button id="next-btn">View Epilogue</button>
+                <div class="scene-image-container">
+                    ${imgHtml}
+                </div>
+                <div class="dialogue-panel text-center">
+                    <h1 class="ending-title-display">${node ? node.title || 'THE END' : 'THE END'}</h1>
+                    <div class="narration-content" style="margin: 0 auto;">${node ? node.text : 'Error loading ending.'}</div>
+                    ${node && node.outcome ? `<div class="ending-stats">${node.outcome}</div>` : ''}
+                </div>
+                <div class="choices-panel text-center">
+                    <button id="next-btn" class="btn-primary">View Epilogue</button>
+                </div>
             </div>
         `;
         document.getElementById('next-btn').onclick = onNext;
@@ -147,21 +200,25 @@ const Render = {
         this.clear();
         const factsHtml = (node && node.facts) ? node.facts.map(f => `<li>${f}</li>`).join('') : '';
         const sourcesHtml = (node && node.sources) ? node.sources.map(s => `<li>${s}</li>`).join('') : '';
-        const dedicationHtml = (node && node.dedication) ? `<p><em>${node.dedication}</em></p>` : '';
         
         this.root.innerHTML = `
             <div class="screen">
-                <h2>Epilogue</h2>
-                <div class="text-content">
-                    <h3>Historical Notes</h3>
+                <div class="epilogue-card">
+                    <h1 class="main-title text-center" style="color:#2c2c2c; text-shadow: none; margin-bottom: 2rem;">EPILOGUE</h1>
+                    
+                    <h2>Historical Notes</h2>
                     <ul>${factsHtml}</ul>
-                    <br>
-                    <h3>Sources</h3>
+                    
+                    <h2>Sources</h2>
                     <ul>${sourcesHtml}</ul>
-                    <br>
-                    ${dedicationHtml}
+                    
+                    ${node && node.dedication ? `
+                    <div class="dedication">${node.dedication}</div>` : ''}
                 </div>
-                <button id="restart-btn">Play Again</button>
+                
+                <div class="choices-panel text-center" style="margin-top: 2rem;">
+                    <button id="restart-btn" class="btn-primary">Play Again</button>
+                </div>
             </div>
         `;
         document.getElementById('restart-btn').onclick = onRestart;

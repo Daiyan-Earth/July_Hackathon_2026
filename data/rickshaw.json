@@ -3,7 +3,7 @@
     "id": "rickshaw_intro",
     "character": "rickshaw",
     "type": "intro",
-    "text": "[Placeholder] You are a rickshaw puller..."
+    "text": "You are Rahim, a rickshaw puller who navigates the chaotic, sweltering streets of Dhaka every single day. Your daily earnings dictate whether your family in the village eats, making every taka precious and every lost hour devastating. You usually steer clear of political rallies, knowing that trouble on the streets means no income and potential damage to your rented rickshaw. However, as the protests expand and engulf the city, avoiding the conflict becomes impossible."
   },
   {
     "id": "rickshaw_phase1",
@@ -26,10 +26,84 @@
     ]
   },
   {
+    "id": "rickshaw_phase2",
+    "character": "rickshaw",
+    "type": "phase",
+    "phase": 2,
+    "image": "",
+    "text": "[PLACEHOLDER PHASE 2 TEXT]",
+    "choices": [
+      {
+        "label": "[Placeholder Choice 1]",
+        "next_id": "rickshaw_phase3",
+        "state_effect": { "risk": 1, "helped": 0 }
+      },
+      {
+        "label": "[Placeholder Choice 2]",
+        "next_id": "rickshaw_phase3",
+        "state_effect": { "risk": 0, "helped": 1 }
+      }
+    ]
+  },
+  {
+    "id": "rickshaw_phase3",
+    "character": "rickshaw",
+    "type": "phase",
+    "phase": 3,
+    "image": "",
+    "text": "[PLACEHOLDER PHASE 3 TEXT]",
+    "choices": [
+      {
+        "label": "[Placeholder Choice 1]",
+        "next_id": "rickshaw_phase4",
+        "state_effect": { "risk": 1, "helped": 1 }
+      },
+      {
+        "label": "[Placeholder Choice 2]",
+        "next_id": "rickshaw_phase4",
+        "state_effect": { "risk": 0, "helped": 0 }
+      }
+    ]
+  },
+  {
+    "id": "rickshaw_phase4",
+    "character": "rickshaw",
+    "type": "phase",
+    "phase": 4,
+    "image": "",
+    "text": "[PLACEHOLDER PHASE 4 TEXT]",
+    "choices": [
+      {
+        "label": "[Placeholder Choice 1]",
+        "next_id": "rickshaw_ending",
+        "state_effect": { "risk": 1, "helped": 1 }
+      },
+      {
+        "label": "[Placeholder Choice 2]",
+        "next_id": "rickshaw_ending",
+        "state_effect": {}
+      }
+    ]
+  },
+  {
     "id": "rickshaw_ending_default",
     "character": "rickshaw",
     "type": "ending",
     "condition": "default",
-    "text": "[Placeholder] Rickshaw default ending."
+    "text": "[Placeholder Ending] You kept your rickshaw safe and provided for your family, watching the revolution from the sidelines."
+  },
+  {
+    "id": "rickshaw_ending_impact",
+    "character": "rickshaw",
+    "type": "ending",
+    "condition": "helped>=2",
+    "text": "[Placeholder Ending] You became an unsung hero of the streets, ferrying the injured and transporting supplies at great personal cost."
+  },
+  {
+    "id": "rickshaw_ending_cost",
+    "character": "rickshaw",
+    "type": "ending",
+    "condition": "risk>=3",
+    "text": "[Placeholder Ending] Your bravery cost you dearly. Your rickshaw was destroyed, and your livelihood is uncertain, but you stood with the people."
   }
 ]

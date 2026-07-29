@@ -3,7 +3,7 @@
     "id": "doctor_intro",
     "character": "doctor",
     "type": "intro",
-    "text": "[Placeholder] You are a doctor working at a busy public hospital. The protests are just beginning, but you already feel the tension in the emergency room."
+    "text": "You are Dr. Amina, a senior resident at Dhaka Medical College Hospital. Your days are long, grueling, and filled with the relentless pressure of an underfunded public healthcare system. Despite the exhaustion, you are deeply committed to your patients and your oath to save lives regardless of their background. When the protests erupt, your emergency room becomes the frontline, forcing you to make impossible choices between your career and your conscience."
   },
   {
     "id": "doctor_phase1",
@@ -11,7 +11,7 @@
     "type": "phase",
     "phase": 1,
     "image": "",
-    "text": "[Placeholder Phase 1: Calm Before] A group of injured students is brought in. The authorities demand you report their names.",
+    "text": "[Placeholder Phase 1] A group of injured students is brought in. The authorities demand you report their names.",
     "choices": [
       {
         "label": "Treat them quietly, don't report",
@@ -21,29 +21,89 @@
       {
         "label": "Report them as instructed",
         "next_id": "doctor_phase2",
-        "state_effect": { "risk": 0 }
+        "state_effect": {}
       }
     ]
   },
   {
-    "id": "doctor_ending_quiet",
+    "id": "doctor_phase2",
+    "character": "doctor",
+    "type": "phase",
+    "phase": 2,
+    "image": "",
+    "text": "[PLACEHOLDER PHASE 2 TEXT]",
+    "choices": [
+      {
+        "label": "[Placeholder Choice 1]",
+        "next_id": "doctor_phase3",
+        "state_effect": { "risk": 1, "helped": 0 }
+      },
+      {
+        "label": "[Placeholder Choice 2]",
+        "next_id": "doctor_phase3",
+        "state_effect": { "risk": 0, "helped": 1 }
+      }
+    ]
+  },
+  {
+    "id": "doctor_phase3",
+    "character": "doctor",
+    "type": "phase",
+    "phase": 3,
+    "image": "",
+    "text": "[PLACEHOLDER PHASE 3 TEXT]",
+    "choices": [
+      {
+        "label": "[Placeholder Choice 1]",
+        "next_id": "doctor_phase4",
+        "state_effect": { "risk": 1, "helped": 1 }
+      },
+      {
+        "label": "[Placeholder Choice 2]",
+        "next_id": "doctor_phase4",
+        "state_effect": { "risk": 0, "helped": 0 }
+      }
+    ]
+  },
+  {
+    "id": "doctor_phase4",
+    "character": "doctor",
+    "type": "phase",
+    "phase": 4,
+    "image": "",
+    "text": "[PLACEHOLDER PHASE 4 TEXT]",
+    "choices": [
+      {
+        "label": "[Placeholder Choice 1]",
+        "next_id": "doctor_ending",
+        "state_effect": { "risk": 1, "helped": 1 }
+      },
+      {
+        "label": "[Placeholder Choice 2]",
+        "next_id": "doctor_ending",
+        "state_effect": {}
+      }
+    ]
+  },
+  {
+    "id": "doctor_ending_default",
     "character": "doctor",
     "type": "ending",
     "condition": "default",
-    "text": "[Placeholder Ending: Quiet Survival] You kept your head down. You survived, but the memories of those you couldn't help will linger."
+    "text": "[Placeholder Ending] You kept your head down. You survived, but the memories of those you couldn't help will linger."
   },
   {
     "id": "doctor_ending_impact",
     "character": "doctor",
     "type": "ending",
-    "condition": "helped>=1",
-    "text": "[Placeholder Ending: Impact] Your actions saved lives. It wasn't easy, but your quiet resistance made a difference."
+    "condition": "helped>=2",
+    "text": "[Placeholder Ending] Your actions saved lives. It wasn't easy, but your quiet resistance made a difference."
   },
   {
     "id": "doctor_ending_cost",
     "character": "doctor",
     "type": "ending",
-    "condition": "risk>=2",
-    "text": "[Placeholder Ending: Cost] The risks you took caught up with you. You were detained, facing severe consequences for your principles."
+    "condition": "risk>=3",
+    "text": "[Placeholder Ending] The risks you took caught up with you. You were detained, facing severe consequences for your principles."
   }
 ]

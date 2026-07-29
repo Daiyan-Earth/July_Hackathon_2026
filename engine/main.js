@@ -54,15 +54,16 @@ async function renderCurrentScreen() {
             }
             
             Render.phaseScreen(phaseNode, (choice) => {
-                // Apply state effect
-                if (choice.state_effect) {
-                    if (choice.state_effect.risk) AppState.state.risk += choice.state_effect.risk;
-                    if (choice.state_effect.helped) AppState.state.helped += choice.state_effect.helped;
-                }
-                
-                // For a robust system, you'd probably rely on next_id, 
-                // but for our simple 4-phase loop, incrementing phase works as per spec.
+                engine.selectChoice(choice, AppState.state);
+                AppState.screen = "CONSEQUENCE";
+                renderCurrentScreen();
+            });
+            break;
+
+        case "CONSEQUENCE":
+            Render.consequenceScreen(engine.currentConsequence, () => {
                 AppState.phase += 1;
+                AppState.screen = "PHASE";
                 renderCurrentScreen();
             });
             break;

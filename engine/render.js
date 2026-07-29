@@ -85,6 +85,24 @@ const Render = {
         });
     },
 
+    consequenceScreen(consequence, onContinue) {
+        this.clear();
+        
+        const imgHtml = (consequence && consequence.image) ? `<img src="${consequence.image}" class="phase-image" alt="Consequence Image">` : '';
+        const textHtml = (consequence && consequence.text) ? consequence.text : 'Error loading consequence.';
+
+        this.root.innerHTML = `
+            <div class="screen">
+                <h2>Consequence</h2>
+                ${imgHtml}
+                <div class="text-content">${textHtml}</div>
+                <button id="continue-btn">Continue</button>
+            </div>
+        `;
+        
+        document.getElementById('continue-btn').onclick = onContinue;
+    },
+
     endingScreen(node, onNext) {
         this.clear();
         this.root.innerHTML = `

@@ -71,4 +71,15 @@ class StoryEngine {
 
         return matchingEnding || endings[0];
     }
+
+    selectChoice(choice, stateObj) {
+        if (choice.state_effect) {
+            if (choice.state_effect.risk) stateObj.risk += choice.state_effect.risk;
+            if (choice.state_effect.helped) stateObj.helped += choice.state_effect.helped;
+        }
+        this.currentConsequence = {
+            image: choice.consequence_image || "",
+            text: choice.consequence_text || "[Placeholder Consequence Text]"
+        };
+    }
 }

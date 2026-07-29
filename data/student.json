@@ -16,12 +16,19 @@
       {
         "label": "Join the organizers",
         "next_id": "student_phase2",
-        "state_effect": { "risk": 1, "helped": 1 }
+        "state_effect": {
+          "risk": 1,
+          "helped": 1
+        },
+        "consequence_image": "",
+        "consequence_text": "[Placeholder Consequence Text]"
       },
       {
         "label": "Stay in your dorm",
         "next_id": "student_phase2",
-        "state_effect": {}
+        "state_effect": {},
+        "consequence_image": "",
+        "consequence_text": "[Placeholder Consequence Text]"
       }
     ]
   },
@@ -36,12 +43,22 @@
       {
         "label": "[Placeholder Choice 1]",
         "next_id": "student_phase3",
-        "state_effect": { "risk": 1, "helped": 0 }
+        "state_effect": {
+          "risk": 1,
+          "helped": 0
+        },
+        "consequence_image": "",
+        "consequence_text": "[Placeholder Consequence Text]"
       },
       {
         "label": "[Placeholder Choice 2]",
         "next_id": "student_phase3",
-        "state_effect": { "risk": 0, "helped": 1 }
+        "state_effect": {
+          "risk": 0,
+          "helped": 1
+        },
+        "consequence_image": "",
+        "consequence_text": "[Placeholder Consequence Text]"
       }
     ]
   },
@@ -56,12 +73,22 @@
       {
         "label": "[Placeholder Choice 1]",
         "next_id": "student_phase4",
-        "state_effect": { "risk": 1, "helped": 1 }
+        "state_effect": {
+          "risk": 1,
+          "helped": 1
+        },
+        "consequence_image": "",
+        "consequence_text": "[Placeholder Consequence Text]"
       },
       {
         "label": "[Placeholder Choice 2]",
         "next_id": "student_phase4",
-        "state_effect": { "risk": 0, "helped": 0 }
+        "state_effect": {
+          "risk": 0,
+          "helped": 0
+        },
+        "consequence_image": "",
+        "consequence_text": "[Placeholder Consequence Text]"
       }
     ]
   },
@@ -76,12 +103,19 @@
       {
         "label": "[Placeholder Choice 1]",
         "next_id": "student_ending",
-        "state_effect": { "risk": 1, "helped": 1 }
+        "state_effect": {
+          "risk": 1,
+          "helped": 1
+        },
+        "consequence_image": "",
+        "consequence_text": "[Placeholder Consequence Text]"
       },
       {
         "label": "[Placeholder Choice 2]",
         "next_id": "student_ending",
-        "state_effect": {}
+        "state_effect": {},
+        "consequence_image": "",
+        "consequence_text": "[Placeholder Consequence Text]"
       }
     ]
   },

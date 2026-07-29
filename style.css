@@ -71,13 +71,48 @@ button {
     font-size: 1rem;
     cursor: pointer;
     border-radius: 8px;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
     min-height: 44px; /* Touch target size */
+    transform: scale(1);
 }
 
 button:hover {
     background-color: var(--button-hover);
     border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.98) translateY(0);
+    box-shadow: none;
+}
+
+/* Consequence Scene Layout */
+.consequence-screen {
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.consequence-screen .phase-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+}
+
+.consequence-screen .text-content {
+    font-size: 1.25rem;
+    max-width: 650px;
+    margin-bottom: 0;
+}
+
+.consequence-screen #continue-btn {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
 }
 
 img.phase-image {

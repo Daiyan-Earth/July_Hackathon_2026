@@ -92,8 +92,7 @@ const Render = {
         const textHtml = (consequence && consequence.text) ? consequence.text : 'Error loading consequence.';
 
         this.root.innerHTML = `
-            <div class="screen">
-                <h2>Consequence</h2>
+            <div class="screen consequence-screen">
                 ${imgHtml}
                 <div class="text-content">${textHtml}</div>
                 <button id="continue-btn">Continue</button>

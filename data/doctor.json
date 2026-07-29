@@ -11,24 +11,24 @@
     "type": "phase",
     "phase": 1,
     "image": "",
-    "text": "[Placeholder Phase 1] A group of injured students is brought in. The authorities demand you report their names.",
+    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A tense, overcrowded emergency room in Dhaka, a female doctor looking overwhelmed but resolute.",
+    "text": "The first wave of injured students is brought in. They are bleeding and scared. The authorities demand you log their real names and report them immediately.",
     "choices": [
       {
-        "label": "Treat them quietly, don't report",
+        "label": "Treat them secretly without logging names.",
         "next_id": "doctor_phase2",
-        "state_effect": {
-          "helped": 1,
-          "risk": 1
-        },
+        "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor bandaging a student's arm in a dimly lit, secluded hospital corridor.",
+        "consequence_text": "You bandage them in a back ward. If the authorities check the logs, you will be held responsible."
       },
       {
-        "label": "Report them as instructed",
+        "label": "Follow protocol and log their details.",
         "next_id": "doctor_phase2",
-        "state_effect": {},
+        "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor reluctantly writing in a hospital ledger while armed police stand in the background.",
+        "consequence_text": "You log their details. A cold sense of guilt washes over you as police wait outside the ER."
       }
     ]
   },
@@ -38,27 +38,24 @@
     "type": "phase",
     "phase": 2,
     "image": "",
-    "text": "[PLACEHOLDER PHASE 2 TEXT]",
+    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A hospital courtyard at night, tear gas drifting in the air, medics rushing with supplies.",
+    "text": "The hospital is overwhelmed, and supplies are running desperately low. Tear gas drifts into the corridors. Street medic camps outside are begging for gauze and saline.",
     "choices": [
       {
-        "label": "[Placeholder Choice 1]",
+        "label": "Smuggle supplies out to a street medic camp.",
         "next_id": "doctor_phase3",
-        "state_effect": {
-          "risk": 1,
-          "helped": 0
-        },
+        "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor sneaking boxes of medical supplies through a chain-link fence to waiting volunteers.",
+        "consequence_text": "You sneak out with gauze and saline. A stray tear gas canister forces you to run back inside coughing."
       },
       {
-        "label": "[Placeholder Choice 2]",
+        "label": "Stay in the ER and treat only those inside.",
         "next_id": "doctor_phase3",
-        "state_effect": {
-          "risk": 0,
-          "helped": 1
-        },
+        "state_effect": { "helped": 1, "risk": 0 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor frantically working on a patient in a chaotic emergency room.",
+        "consequence_text": "You work frantically, saving lives within the safety of the hospital walls."
       }
     ]
   },
@@ -68,27 +65,24 @@
     "type": "phase",
     "phase": 3,
     "image": "",
-    "text": "[PLACEHOLDER PHASE 3 TEXT]",
+    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Armed officers marching down a hospital hallway, medical staff looking on in fear.",
+    "text": "Authorities storm the hospital demanding you hand over protesters hiding in the wards. They threaten to revoke your medical license if you obstruct them.",
     "choices": [
       {
-        "label": "[Placeholder Choice 1]",
+        "label": "Hide protesters in the staff quarters.",
         "next_id": "doctor_phase4",
-        "state_effect": {
-          "risk": 1,
-          "helped": 1
-        },
+        "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor ushering wounded youths into a cramped locker room, finger to her lips signaling silence.",
+        "consequence_text": "You quickly usher wounded students into a locked locker room, sweating as officers march past."
       },
       {
-        "label": "[Placeholder Choice 2]",
+        "label": "Step aside and let them search.",
         "next_id": "doctor_phase4",
-        "state_effect": {
-          "risk": 0,
-          "helped": 0
-        },
+        "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor looking away in shame as officers drag injured youths out of a hospital bed.",
+        "consequence_text": "You look away as officers drag injured youths away. The shame is unbearable."
       }
     ]
   },
@@ -98,24 +92,24 @@
     "type": "phase",
     "phase": 4,
     "image": "",
-    "text": "[PLACEHOLDER PHASE 4 TEXT]",
+    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. An exhausted doctor leaning against a hospital wall, early morning light filtering through a window.",
+    "text": "Victory seems near, but the final clashes are brutal. You have been awake for over 30 hours, and a new surge of critically injured patients is arriving.",
     "choices": [
       {
-        "label": "[Placeholder Choice 1]",
+        "label": "Work a 48-hour shift to handle the surge.",
         "next_id": "doctor_ending",
-        "state_effect": {
-          "risk": 1,
-          "helped": 1
-        },
+        "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor with dark circles under her eyes, determinedly stitching a wound under bright surgical lights.",
+        "consequence_text": "Your vision blurs from exhaustion, but you stitch another wound. You refuse to abandon your post."
       },
       {
-        "label": "[Placeholder Choice 2]",
+        "label": "Hand over to the night shift and rest.",
         "next_id": "doctor_ending",
-        "state_effect": {},
+        "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor walking home through debris-littered streets in the early dawn.",
+        "consequence_text": "You walk home through debris-littered streets, praying the worst is over."
       }
     ]
   },
@@ -124,20 +118,20 @@
     "character": "doctor",
     "type": "ending",
     "condition": "default",
-    "text": "[Placeholder Ending] You kept your head down. You survived, but the memories of those you couldn't help will linger."
+    "text": "You kept your head down, prioritizing your career and safety. You survived the upheaval, but the faces of those you couldn't help will linger in your memory for years."
   },
   {
     "id": "doctor_ending_impact",
     "character": "doctor",
     "type": "ending",
     "condition": "helped>=2",
-    "text": "[Placeholder Ending] Your actions saved lives. It wasn't easy, but your quiet resistance made a difference."
+    "text": "Your tireless actions saved countless lives. It wasn't easy, and you faced enormous pressure, but your quiet resistance made a profound difference in the lives of the protesters."
   },
   {
     "id": "doctor_ending_cost",
     "character": "doctor",
     "type": "ending",
     "condition": "risk>=3",
-    "text": "[Placeholder Ending] The risks you took caught up with you. You were detained, facing severe consequences for your principles."
+    "text": "The massive risks you took caught up with you. You faced interrogation and your license was temporarily suspended, paying a severe professional price for standing by your principles."
   }
 ]

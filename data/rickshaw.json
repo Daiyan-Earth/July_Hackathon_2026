@@ -3,7 +3,7 @@
     "id": "rickshaw_intro",
     "character": "rickshaw",
     "type": "intro",
-    "text": "You are Rahim, a rickshaw puller who navigates the chaotic, sweltering streets of Dhaka every single day. Your daily earnings dictate whether your family in the village eats, making every taka precious and every lost hour devastating. You usually steer clear of political rallies, knowing that trouble on the streets means no income and potential damage to your rented rickshaw. However, as the protests expand and engulf the city, avoiding the conflict becomes impossible."
+    "text": "You are Rahim, a hardworking rickshaw puller in Dhaka. Every day is a struggle to earn enough taka to feed your wife and three children. You usually try to stay out of politics, knowing that a single day without work means your family goes hungry. But as the streets you know so well transform into battlegrounds, avoiding the revolution becomes impossible."
   },
   {
     "id": "rickshaw_phase1",
@@ -11,24 +11,24 @@
     "type": "phase",
     "phase": 1,
     "image": "",
-    "text": "[Placeholder Phase 1] The streets are tense today.",
+    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A weathered rickshaw puller navigating a chaotic street filled with running protesters.",
+    "text": "The streets are growing tense. You see a group of students running away from baton-wielding police. One student trips near your rickshaw and begs for a ride to safety.",
     "choices": [
       {
-        "label": "Ferry protestors for free",
+        "label": "Ferry the student to safety.",
         "next_id": "rickshaw_phase2",
-        "state_effect": {
-          "risk": 1,
-          "helped": 1
-        },
+        "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller pedaling furiously with a student in the back, police officers shouting in the background.",
+        "consequence_text": "You pedal hard, carrying the student away from danger. Your muscles ache, but they thank you profusely."
       },
       {
-        "label": "Avoid the protest areas",
+        "label": "Go home to avoid losing your rickshaw.",
         "next_id": "rickshaw_phase2",
-        "state_effect": {},
+        "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller sadly parking his vehicle in a narrow, empty alleyway.",
+        "consequence_text": "You park the rickshaw early. You make no money today, meaning a meager dinner for your family."
       }
     ]
   },
@@ -38,27 +38,24 @@
     "type": "phase",
     "phase": 2,
     "image": "",
-    "text": "[PLACEHOLDER PHASE 2 TEXT]",
+    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A desolate Dhaka intersection during a blackout, a single rickshaw visible in the gloom.",
+    "text": "The internet blackout begins, and all motorized transport is halted. The city is eerily quiet, punctuated only by distant sirens. Ambulances are blocked by barricades.",
     "choices": [
       {
-        "label": "[Placeholder Choice 1]",
+        "label": "Use your rickshaw as an improvised ambulance.",
         "next_id": "rickshaw_phase3",
-        "state_effect": {
-          "risk": 1,
-          "helped": 0
-        },
+        "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw transporting a bleeding youth, the puller navigating a makeshift barricade.",
+        "consequence_text": "You transport a bleeding student to a clinic, dodging checkpoints. The blood stains the seat, but you saved a life."
       },
       {
-        "label": "[Placeholder Choice 2]",
+        "label": "Hide the rickshaw in an alley.",
         "next_id": "rickshaw_phase3",
-        "state_effect": {
-          "risk": 0,
-          "helped": 1
-        },
+        "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw covered by a torn blue tarp in a dark slum alley.",
+        "consequence_text": "You cover your livelihood with a tarp, hoping the clashes don't reach your neighborhood."
       }
     ]
   },
@@ -68,27 +65,24 @@
     "type": "phase",
     "phase": 3,
     "image": "",
-    "text": "[PLACEHOLDER PHASE 3 TEXT]",
+    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Locals dismantling a construction site to build a street barricade, tires burning.",
+    "text": "Clashes intensify near your slum. Protesters are setting up barricades to prevent armored vehicles from entering the narrow streets.",
     "choices": [
       {
-        "label": "[Placeholder Choice 1]",
+        "label": "Help build a barricade.",
         "next_id": "rickshaw_phase4",
-        "state_effect": {
-          "risk": 1,
-          "helped": 1
-        },
+        "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller dragging a heavy piece of corrugated metal to add to a burning barricade.",
+        "consequence_text": "You drag metal sheets and tires into the street. The unity among the crowd gives you courage."
       },
       {
-        "label": "[Placeholder Choice 2]",
+        "label": "Stay inside, scrounging for food.",
         "next_id": "rickshaw_phase4",
-        "state_effect": {
-          "risk": 0,
-          "helped": 0
-        },
+        "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A family huddled together in a small tin-roofed shack, sharing a small bowl of rice.",
+        "consequence_text": "You share a handful of rice with your neighbors, listening to distant gunshots in fear."
       }
     ]
   },
@@ -98,24 +92,24 @@
     "type": "phase",
     "phase": 4,
     "image": "",
-    "text": "[PLACEHOLDER PHASE 4 TEXT]",
+    "image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A massive, unstoppable crowd of ordinary citizens marching towards the capital center.",
+    "text": "It is the final day. Millions of people from all classes are marching towards the square. The oppressive regime is crumbling.",
     "choices": [
       {
-        "label": "[Placeholder Choice 1]",
+        "label": "Join the final march to the square.",
         "next_id": "rickshaw_ending",
-        "state_effect": {
-          "risk": 1,
-          "helped": 1
-        },
+        "state_effect": { "helped": 1, "risk": 1 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller walking shoulder-to-shoulder with students and professionals, chanting loudly.",
+        "consequence_text": "You leave the rickshaw behind and walk with the masses, shouting for a better future for your children."
       },
       {
-        "label": "[Placeholder Choice 2]",
+        "label": "Wait it out at home.",
         "next_id": "rickshaw_ending",
-        "state_effect": {},
+        "state_effect": { "helped": 0, "risk": 0 },
         "consequence_image": "",
-        "consequence_text": "[Placeholder Consequence Text]"
+        "consequence_image_prompt": "2D semi-realistic digital painting, muted cinematic colors, dramatic lighting, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller sitting by a small battery-powered radio, listening intently.",
+        "consequence_text": "You sit by the radio, waiting to hear if the country has truly changed."
       }
     ]
   },
@@ -124,20 +118,20 @@
     "character": "rickshaw",
     "type": "ending",
     "condition": "default",
-    "text": "[Placeholder Ending] You kept your rickshaw safe and provided for your family, watching the revolution from the sidelines."
+    "text": "You survived the turmoil, keeping your family safe and your rickshaw intact. Though you didn't participate in the uprising, you hope the new government will remember the poor."
   },
   {
     "id": "rickshaw_ending_impact",
     "character": "rickshaw",
     "type": "ending",
     "condition": "helped>=2",
-    "text": "[Placeholder Ending] You became an unsung hero of the streets, ferrying the injured and transporting supplies at great personal cost."
+    "text": "Your small but brave actions—ferrying the injured and helping the youth—made you an unsung hero of the revolution. You proved that every citizen holds the power to change a nation."
   },
   {
     "id": "rickshaw_ending_cost",
     "character": "rickshaw",
     "type": "ending",
     "condition": "risk>=3",
-    "text": "[Placeholder Ending] Your bravery cost you dearly. Your rickshaw was destroyed, and your livelihood is uncertain, but you stood with the people."
+    "text": "Your bravery came at a high cost. Your rickshaw was heavily damaged in the clashes, plunging you into deep debt. Yet, as you watch the youth celebrate their freedom, you feel a tearful sense of pride."
   }
 ]

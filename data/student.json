@@ -3,7 +3,7 @@
     "id": "student_intro",
     "character": "student",
     "type": "intro",
-    "text": "[Placeholder] You are a university student..."
+    "text": "You are Farhan, a third-year undergraduate student at Dhaka University. Your life usually revolves around attending lectures, studying for exams in the library, and hanging out with friends at the campus TSC. As the eldest son, you carry the heavy expectation of graduating and securing a good job to support your family. But as tensions on campus reach a boiling point, your ordinary routine is about to be shattered."
   },
   {
     "id": "student_phase1",
@@ -26,10 +26,84 @@
     ]
   },
   {
+    "id": "student_phase2",
+    "character": "student",
+    "type": "phase",
+    "phase": 2,
+    "image": "",
+    "text": "[PLACEHOLDER PHASE 2 TEXT]",
+    "choices": [
+      {
+        "label": "[Placeholder Choice 1]",
+        "next_id": "student_phase3",
+        "state_effect": { "risk": 1, "helped": 0 }
+      },
+      {
+        "label": "[Placeholder Choice 2]",
+        "next_id": "student_phase3",
+        "state_effect": { "risk": 0, "helped": 1 }
+      }
+    ]
+  },
+  {
+    "id": "student_phase3",
+    "character": "student",
+    "type": "phase",
+    "phase": 3,
+    "image": "",
+    "text": "[PLACEHOLDER PHASE 3 TEXT]",
+    "choices": [
+      {
+        "label": "[Placeholder Choice 1]",
+        "next_id": "student_phase4",
+        "state_effect": { "risk": 1, "helped": 1 }
+      },
+      {
+        "label": "[Placeholder Choice 2]",
+        "next_id": "student_phase4",
+        "state_effect": { "risk": 0, "helped": 0 }
+      }
+    ]
+  },
+  {
+    "id": "student_phase4",
+    "character": "student",
+    "type": "phase",
+    "phase": 4,
+    "image": "",
+    "text": "[PLACEHOLDER PHASE 4 TEXT]",
+    "choices": [
+      {
+        "label": "[Placeholder Choice 1]",
+        "next_id": "student_ending",
+        "state_effect": { "risk": 1, "helped": 1 }
+      },
+      {
+        "label": "[Placeholder Choice 2]",
+        "next_id": "student_ending",
+        "state_effect": {}
+      }
+    ]
+  },
+  {
     "id": "student_ending_default",
     "character": "student",
     "type": "ending",
     "condition": "default",
-    "text": "[Placeholder] Student default ending."
+    "text": "[Placeholder] You kept your head down and focused on your studies. When the dust settled, you were safe, but you couldn't help feeling you had missed a defining moment in your nation's history."
+  },
+  {
+    "id": "student_ending_impact",
+    "character": "student",
+    "type": "ending",
+    "condition": "helped>=2",
+    "text": "[Placeholder] Your contributions, big or small, helped sustain the movement. You stood shoulder to shoulder with your peers, making a real difference."
+  },
+  {
+    "id": "student_ending_cost",
+    "character": "student",
+    "type": "ending",
+    "condition": "risk>=3",
+    "text": "[Placeholder] You were on the front lines, risking everything. You suffered injuries and faced detainment, paying a heavy personal price for the revolution's success."
   }
 ]

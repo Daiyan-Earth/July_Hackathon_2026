@@ -61,16 +61,29 @@ const Render = {
     phaseScreen(node, onChoice) {
         this.clear();
         
-        const imgHtml = (node && node.image) ? `<img src="${node.image}" class="phase-image" alt="Phase Image">` : '';
+        const imgHtml = (node && node.image) ? `<img src="${node.image}" class="scene-image" alt="Phase Image">` : '';
         const choicesHtml = (node && node.choices) ? node.choices.map((c, idx) => `
             <button data-idx="${idx}">${c.label}</button>
         `).join('') : '';
 
+        const char = typeof AppState !== 'undefined' && AppState.character ? AppState.character : 'character';
+        const charName = char.charAt(0).toUpperCase() + char.slice(1);
+        const phase = typeof AppState !== 'undefined' && AppState.phase ? AppState.phase : 1;
+        const dateStr = (14 + phase) + " July 2024";
+        let locationStr = "Dhaka, Bangladesh";
+        if (char === 'doctor') locationStr = "Dhaka Medical College";
+        if (char === 'student') locationStr = "Dhaka University Campus";
+        if (char === 'rickshaw') locationStr = "Mirpur Road";
+
         this.root.innerHTML = `
-            <div class="screen">
-                <h2>Phase ${node ? node.phase : '?'}</h2>
+            <div class="screen scene-layout">
                 ${imgHtml}
-                <div class="text-content">${node ? node.text : 'Error loading phase.'}</div>
+                <div class="scene-header">
+                    <h2 class="character-name">${charName}</h2>
+                    <div class="scene-meta">📍 ${locationStr} • ${dateStr}</div>
+                </div>
+                <div class="narration">${node ? node.text : 'Error loading phase.'}</div>
+                <hr class="scene-divider">
                 <div class="choices-container">
                     ${choicesHtml}
                 </div>
@@ -88,14 +101,30 @@ const Render = {
     consequenceScreen(consequence, onContinue) {
         this.clear();
         
-        const imgHtml = (consequence && consequence.image) ? `<img src="${consequence.image}" class="phase-image" alt="Consequence Image">` : '';
+        const imgHtml = (consequence && consequence.image) ? `<img src="${consequence.image}" class="scene-image" alt="Consequence Image">` : '';
         const textHtml = (consequence && consequence.text) ? consequence.text : 'Error loading consequence.';
 
+        const char = typeof AppState !== 'undefined' && AppState.character ? AppState.character : 'character';
+        const charName = char.charAt(0).toUpperCase() + char.slice(1);
+        const phase = typeof AppState !== 'undefined' && AppState.phase ? AppState.phase : 1;
+        const dateStr = (14 + phase) + " July 2024";
+        let locationStr = "Dhaka, Bangladesh";
+        if (char === 'doctor') locationStr = "Dhaka Medical College";
+        if (char === 'student') locationStr = "Dhaka University Campus";
+        if (char === 'rickshaw') locationStr = "Mirpur Road";
+
         this.root.innerHTML = `
-            <div class="screen consequence-screen">
+            <div class="screen scene-layout consequence-layout">
                 ${imgHtml}
-                <div class="text-content">${textHtml}</div>
-                <button id="continue-btn">Continue</button>
+                <div class="scene-header">
+                    <h2 class="character-name">${charName}</h2>
+                    <div class="scene-meta">📍 ${locationStr} • ${dateStr}</div>
+                </div>
+                <div class="narration">${textHtml}</div>
+                <hr class="scene-divider">
+                <div class="choices-container">
+                    <button id="continue-btn">Continue</button>
+                </div>
             </div>
         `;
         

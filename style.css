@@ -6,7 +6,7 @@
     --meta-gray: #8a8a9a;
     --pixel-border: 2px solid #3a3b4c;
     --hover-bright: rgba(40, 40, 48, 0.95);
-    
+
     --font-pixel: 'VT323', monospace;
     --font-body: 'Lora', serif;
 }
@@ -38,13 +38,23 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes kenBurns {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.05); }
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
 }
 
 .screen {
@@ -67,9 +77,12 @@ body {
 
 .title-screen-bg {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>') opacity(0.05),
-                radial-gradient(circle at center, #1a1e29 0%, #0d0f14 100%);
+        radial-gradient(circle at center, #1a1e29 0%, #0d0f14 100%);
     z-index: -1;
 }
 
@@ -78,7 +91,7 @@ body {
     padding: 4rem;
     border-radius: 8px;
     border: var(--pixel-border);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
     text-align: center;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -88,7 +101,7 @@ body {
     font-family: var(--font-pixel);
     font-size: 5rem;
     color: var(--accent-red);
-    text-shadow: 2px 2px 0px #000, 4px 4px 0px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 0px #000, 4px 4px 0px rgba(0, 0, 0, 0.5);
     margin-bottom: 1rem;
     line-height: 1;
 }
@@ -110,7 +123,7 @@ body {
     padding: 1rem 3rem;
     font-size: 1.75rem;
     cursor: pointer;
-    box-shadow: inset -2px -2px 0px rgba(0,0,0,0.5), inset 2px 2px 0px rgba(255,255,255,0.1), 0 5px 15px rgba(0,0,0,0.5);
+    box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.1), 0 5px 15px rgba(0, 0, 0, 0.5);
     transition: all 0.2s ease;
     text-transform: uppercase;
 }
@@ -118,13 +131,13 @@ body {
 .btn-primary:hover {
     background: var(--hover-bright);
     transform: translateY(-2px);
-    box-shadow: inset -2px -2px 0px rgba(0,0,0,0.5), inset 2px 2px 0px rgba(255,255,255,0.1), 0 8px 20px rgba(168, 58, 58, 0.2);
+    box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.1), 0 8px 20px rgba(168, 58, 58, 0.2);
     border-color: var(--accent-red);
 }
 
 .btn-primary:active {
     transform: translateY(1px);
-    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5), 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.5), 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Character Selection */
@@ -152,7 +165,7 @@ body {
     width: 100%;
     max-width: 350px;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transition: all 0.2s ease;
     display: flex;
     flex-direction: column;
@@ -162,7 +175,7 @@ body {
 
 .save-slot-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.7), 0 0 15px rgba(168, 58, 58, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(168, 58, 58, 0.3);
     border-color: var(--accent-red);
     background: var(--hover-bright);
 }
@@ -177,7 +190,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 4rem;
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 .save-slot-title {
@@ -201,7 +214,7 @@ body {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     background: #000;
 }
 
@@ -216,9 +229,12 @@ body {
 .scene-image-container::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.8) 100%),
-                linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.5) 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.8) 100%),
+        linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.5) 100%);
     pointer-events: none;
 }
 
@@ -241,9 +257,10 @@ body {
     -webkit-backdrop-filter: blur(5px);
     border-radius: 12px;
     padding: 3rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.05);
-    margin-top: -3rem; /* overlap image slightly */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: -3rem;
+    /* overlap image slightly */
     position: relative;
     z-index: 10;
     max-width: 900px;
@@ -281,6 +298,7 @@ body {
 .narration-content p {
     margin-bottom: 1.5rem;
 }
+
 .narration-content p:last-child {
     margin-bottom: 0;
 }
@@ -301,7 +319,7 @@ body {
     border: var(--pixel-border);
     padding: 1.25rem 2rem;
     border-radius: 6px;
-    box-shadow: inset -2px -2px 0px rgba(0,0,0,0.4), inset 2px 2px 0px rgba(255,255,255,0.05), 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.4), inset 2px 2px 0px rgba(255, 255, 255, 0.05), 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: left;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -312,13 +330,13 @@ body {
 .choice-btn:hover {
     background: #232330;
     transform: translateY(-2px);
-    box-shadow: inset -2px -2px 0px rgba(0,0,0,0.4), inset 2px 2px 0px rgba(255,255,255,0.05), 0 8px 20px rgba(0,0,0,0.5);
+    box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.4), inset 2px 2px 0px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.5);
     border-color: #5a5b6c;
 }
 
 .choice-btn:active {
     transform: translateY(1px);
-    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5);
+    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .choice-label {
@@ -329,12 +347,12 @@ body {
 
 /* Consequence & Ending specific */
 .consequence-overlay {
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0, 0, 0, 0.85);
     border-color: rgba(168, 58, 58, 0.4);
 }
 
 .consequence-image {
-    filter: brightness(0.6) contrast(1.1) grayscale(0.2);
+    filter: brightness(0.85) contrast(1.05) grayscale(0.1);
 }
 
 .ending-title-display {
@@ -354,15 +372,17 @@ body {
 }
 
 .epilogue-card {
-    background: #e8e0d0; /* old paper feel */
+    background: #e8e0d0;
+    /* old paper feel */
     color: #2c2c2c;
     padding: 3rem;
     border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     max-width: 900px;
     margin: 0 auto;
     width: 100%;
 }
+
 .epilogue-card h2 {
     font-family: var(--font-pixel);
     color: #8b2b2b;
@@ -371,6 +391,7 @@ body {
     border-bottom: 2px solid rgba(139, 43, 43, 0.2);
     padding-bottom: 0.5rem;
 }
+
 .epilogue-card ul {
     list-style-type: square;
     padding-left: 2rem;
@@ -378,6 +399,7 @@ body {
     font-size: 1.1rem;
     line-height: 1.7;
 }
+
 .epilogue-card .dedication {
     font-style: italic;
     text-align: center;
@@ -385,7 +407,9 @@ body {
     font-size: 1.25rem;
 }
 
-.text-center { text-align: center; }
+.text-center {
+    text-align: center;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -393,27 +417,34 @@ body {
         height: 40vh;
         border-radius: 0;
     }
+
     .screen {
         padding: 1rem;
         gap: 1rem;
     }
+
     .dialogue-panel {
         padding: 1.5rem;
         margin-top: -1rem;
         border-radius: 8px;
     }
+
     .main-title {
         font-size: 3rem;
     }
+
     .character-name-display {
         font-size: 2rem;
     }
+
     .narration-content {
         font-size: 18px;
     }
+
     .choice-btn {
         padding: 1rem;
     }
+
     .epilogue-card {
         padding: 1.5rem;
     }

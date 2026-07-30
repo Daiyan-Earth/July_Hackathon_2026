@@ -1,0 +1,278 @@
+[
+  {
+    "character": "doctor",
+    "phase": 1,
+    "kind": "phase",
+    "filename": "doctor_phase1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A tense, overcrowded emergency room in Dhaka, a female doctor looking overwhelmed but resolute."
+  },
+  {
+    "character": "doctor",
+    "phase": 1,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "doctor_phase1_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor bandaging a student's arm in a dimly lit, secluded hospital corridor."
+  },
+  {
+    "character": "doctor",
+    "phase": 1,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "doctor_phase1_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor reluctantly writing in a hospital ledger while armed police stand in the background."
+  },
+  {
+    "character": "doctor",
+    "phase": 2,
+    "kind": "phase",
+    "filename": "doctor_phase2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A hospital courtyard at night, tear gas drifting in the air, medics rushing with supplies."
+  },
+  {
+    "character": "doctor",
+    "phase": 2,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "doctor_phase2_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor sneaking boxes of medical supplies through a chain-link fence to waiting volunteers."
+  },
+  {
+    "character": "doctor",
+    "phase": 2,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "doctor_phase2_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor frantically working on a patient in a chaotic emergency room."
+  },
+  {
+    "character": "doctor",
+    "phase": 3,
+    "kind": "phase",
+    "filename": "doctor_phase3.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Armed officers marching down a hospital hallway, medical staff looking on in fear."
+  },
+  {
+    "character": "doctor",
+    "phase": 3,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "doctor_phase3_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor ushering wounded youths into a cramped locker room, finger to her lips signaling silence."
+  },
+  {
+    "character": "doctor",
+    "phase": 3,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "doctor_phase3_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor looking away in shame as officers drag injured youths out of a hospital bed."
+  },
+  {
+    "character": "doctor",
+    "phase": 4,
+    "kind": "phase",
+    "filename": "doctor_phase4.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. An exhausted doctor leaning against a hospital wall, early morning light filtering through a window."
+  },
+  {
+    "character": "doctor",
+    "phase": 4,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "doctor_phase4_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor with dark circles under her eyes, determinedly stitching a wound under bright surgical lights."
+  },
+  {
+    "character": "doctor",
+    "phase": 4,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "doctor_phase4_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A doctor walking home through debris-littered streets in the early dawn."
+  },
+  {
+    "character": "student",
+    "phase": 1,
+    "kind": "phase",
+    "filename": "student_phase1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A crowded university campus with students holding banners, tense atmosphere."
+  },
+  {
+    "character": "student",
+    "phase": 1,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "student_phase1_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A young student chanting amidst a dense crowd of protesters, police blockade visible in the distance."
+  },
+  {
+    "character": "student",
+    "phase": 1,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "student_phase1_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A lone student studying in a dimly lit library, looking distracted out the window."
+  },
+  {
+    "character": "student",
+    "phase": 2,
+    "kind": "phase",
+    "filename": "student_phase2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Darkened streets during a nationwide internet blackout, people whispering in shadows."
+  },
+  {
+    "character": "student",
+    "phase": 2,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "student_phase2_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student hurriedly passing small folded notes to others in a dark alley."
+  },
+  {
+    "character": "student",
+    "phase": 2,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "student_phase2_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student sitting in the dark with family members, looking anxious as shadows cast on the wall."
+  },
+  {
+    "character": "student",
+    "phase": 3,
+    "kind": "phase",
+    "filename": "student_phase3.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A massive crowd marching down a wide avenue despite a curfew, smoke lingering in the air."
+  },
+  {
+    "character": "student",
+    "phase": 3,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "student_phase3_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A brave student locking arms with strangers on the frontline, tear gas smoke swirling."
+  },
+  {
+    "character": "student",
+    "phase": 3,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "student_phase3_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student handing a water bottle to an exhausted protester near a street corner."
+  },
+  {
+    "character": "student",
+    "phase": 4,
+    "kind": "phase",
+    "filename": "student_phase4.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A sea of people converging on a central monument, celebrating amidst waving flags."
+  },
+  {
+    "character": "student",
+    "phase": 4,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "student_phase4_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student standing atop a barricade, raising a fist in victory as the sun breaks through."
+  },
+  {
+    "character": "student",
+    "phase": 4,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "student_phase4_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student watching a flickering television screen broadcasting news of the revolution."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 1,
+    "kind": "phase",
+    "filename": "rickshaw_phase1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A weathered rickshaw puller navigating a chaotic street filled with running protesters."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 1,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "rickshaw_phase1_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller pedaling furiously with a student in the back, police officers shouting in the background."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 1,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "rickshaw_phase1_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller sadly parking his vehicle in a narrow, empty alleyway."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 2,
+    "kind": "phase",
+    "filename": "rickshaw_phase2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A desolate Dhaka intersection during a blackout, a single rickshaw visible in the gloom."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 2,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "rickshaw_phase2_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw transporting a bleeding youth, the puller navigating a makeshift barricade."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 2,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "rickshaw_phase2_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw covered by a torn blue tarp in a dark slum alley."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 3,
+    "kind": "phase",
+    "filename": "rickshaw_phase3.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Locals dismantling a construction site to build a street barricade, tires burning."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 3,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "rickshaw_phase3_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller dragging a heavy piece of corrugated metal to add to a burning barricade."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 3,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "rickshaw_phase3_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A family huddled together in a small tin-roofed shack, sharing a small bowl of rice."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 4,
+    "kind": "phase",
+    "filename": "rickshaw_phase4.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A massive, unstoppable crowd of ordinary citizens marching towards the capital center."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 4,
+    "kind": "consequence",
+    "choiceIndex": 0,
+    "filename": "rickshaw_phase4_choice1.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller walking shoulder-to-shoulder with students and professionals, chanting loudly."
+  },
+  {
+    "character": "rickshaw",
+    "phase": 4,
+    "kind": "consequence",
+    "choiceIndex": 1,
+    "filename": "rickshaw_phase4_choice2.png",
+    "prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A rickshaw puller sitting by a small battery-powered radio, listening intently."
+  }
+]

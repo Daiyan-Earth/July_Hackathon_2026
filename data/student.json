@@ -10,23 +10,29 @@
     "character": "student",
     "type": "phase",
     "phase": 1,
-    "image": "",
+    "image": "assets/images/student_phase1.png",
     "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A crowded university campus with students holding banners, tense atmosphere.",
     "text": "The campus is buzzing with talks of protest. Groups are gathering near the main gate, chanting for quota reform. The authorities are watching closely, and rumors of a crackdown are spreading.",
     "choices": [
       {
         "label": "Join the march.",
         "next_id": "student_phase2",
-        "state_effect": { "risk": 1, "helped": 1 },
-        "consequence_image": "",
+        "state_effect": {
+          "risk": 1,
+          "helped": 1
+        },
+        "consequence_image": "assets/images/student_phase1_choice1.png",
         "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A young student chanting amidst a dense crowd of protesters, police blockade visible in the distance.",
         "consequence_text": "You chant alongside thousands. The energy is electric, but you see a heavy police blockade forming ahead."
       },
       {
         "label": "Stay in the library to study.",
         "next_id": "student_phase2",
-        "state_effect": { "risk": 0, "helped": 0 },
-        "consequence_image": "",
+        "state_effect": {
+          "risk": 0,
+          "helped": 0
+        },
+        "consequence_image": "assets/images/student_phase1_choice2.png",
         "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A lone student studying in a dimly lit library, looking distracted out the window.",
         "consequence_text": "You try to focus on your books, but the distant chants echo through the quiet halls, making you feel isolated."
       }
@@ -37,23 +43,29 @@
     "character": "student",
     "type": "phase",
     "phase": 2,
-    "image": "",
+    "image": "assets/images/student_phase2.png",
     "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. Darkened streets during a nationwide internet blackout, people whispering in shadows.",
     "text": "An internet blackout has descended over the country. Communication is cut off, and violence has erupted on the streets. Protesters are trying to coordinate offline amidst the chaos.",
     "choices": [
       {
         "label": "Coordinate via offline networks.",
         "next_id": "student_phase3",
-        "state_effect": { "risk": 1, "helped": 1 },
-        "consequence_image": "",
+        "state_effect": {
+          "risk": 1,
+          "helped": 1
+        },
+        "consequence_image": "assets/images/student_phase2_choice1.png",
         "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student hurriedly passing small folded notes to others in a dark alley.",
         "consequence_text": "You distribute rally locations written on scraps of paper. It feels dangerous, but entirely necessary."
       },
       {
         "label": "Go home and lock the doors.",
         "next_id": "student_phase3",
-        "state_effect": { "risk": 0, "helped": 0 },
-        "consequence_image": "",
+        "state_effect": {
+          "risk": 0,
+          "helped": 0
+        },
+        "consequence_image": "assets/images/student_phase2_choice2.png",
         "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student sitting in the dark with family members, looking anxious as shadows cast on the wall.",
         "consequence_text": "You sit in the dark with your family. The silence of the city is more terrifying than the noise."
       }
@@ -64,23 +76,29 @@
     "character": "student",
     "type": "phase",
     "phase": 3,
-    "image": "",
+    "image": "assets/images/student_phase3.png",
     "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A massive crowd marching down a wide avenue despite a curfew, smoke lingering in the air.",
     "text": "The Long March to Dhaka has been announced despite a strict curfew. The military is patrolling, and the air is thick with tension and the smell of tear gas.",
     "choices": [
       {
         "label": "March on the frontlines.",
         "next_id": "student_phase4",
-        "state_effect": { "risk": 1, "helped": 1 },
-        "consequence_image": "",
+        "state_effect": {
+          "risk": 1,
+          "helped": 1
+        },
+        "consequence_image": "assets/images/student_phase3_choice1.png",
         "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A brave student locking arms with strangers on the frontline, tear gas smoke swirling.",
         "consequence_text": "Rubber bullets fly past. You swallow tear gas but hold the line, locking arms with absolute strangers."
       },
       {
         "label": "Support from the sidelines.",
         "next_id": "student_phase4",
-        "state_effect": { "risk": 0, "helped": 1 },
-        "consequence_image": "",
+        "state_effect": {
+          "risk": 0,
+          "helped": 1
+        },
+        "consequence_image": "assets/images/student_phase3_choice2.png",
         "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student handing a water bottle to an exhausted protester near a street corner.",
         "consequence_text": "You quickly pass water bottles to exhausted protesters, dodging patrols while keeping a safe distance."
       }
@@ -91,23 +109,29 @@
     "character": "student",
     "type": "phase",
     "phase": 4,
-    "image": "",
+    "image": "assets/images/student_phase4.png",
     "image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A sea of people converging on a central monument, celebrating amidst waving flags.",
     "text": "The climax of the movement has arrived. The government's collapse is imminent, and millions are flooding the streets in a final push for victory.",
     "choices": [
       {
         "label": "Storm the square to celebrate.",
         "next_id": "student_ending",
-        "state_effect": { "risk": 1, "helped": 1 },
-        "consequence_image": "",
+        "state_effect": {
+          "risk": 1,
+          "helped": 1
+        },
+        "consequence_image": "assets/images/student_phase4_choice1.png",
         "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student standing atop a barricade, raising a fist in victory as the sun breaks through.",
         "consequence_text": "You join the massive sea of people surging forward. The fear is gone, replaced by overwhelming hope."
       },
       {
         "label": "Wait for official news safely indoors.",
         "next_id": "student_ending",
-        "state_effect": { "risk": 0, "helped": 0 },
-        "consequence_image": "",
+        "state_effect": {
+          "risk": 0,
+          "helped": 0
+        },
+        "consequence_image": "assets/images/student_phase4_choice2.png",
         "consequence_image_prompt": "16-bit pixel art, SNES-era detailed pixel illustration, warm atmospheric gradient lighting, dusk color palette of ambers, deep purples and warm reds, crisp pixel edges, cinematic framing, historically inspired Bangladesh street environment, emotional storytelling, no text, no watermarks. A student watching a flickering television screen broadcasting news of the revolution.",
         "consequence_text": "You watch the news intently as the streets outside erupt in joyous clamor."
       }

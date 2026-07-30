@@ -3,6 +3,7 @@
     "id": "doctor_intro",
     "character": "doctor",
     "type": "intro",
+    "image": "assets/images/doctor_intro.png",
     "text": "You are Dr. Amina, a senior resident at Dhaka Medical College Hospital. Your days are long, grueling, and filled with the relentless pressure of an underfunded public healthcare system. Despite the exhaustion, you are deeply committed to your patients and your oath to save lives regardless of their background. When the protests erupt, your emergency room becomes the frontline, forcing you to make impossible choices between your career and your conscience."
   },
   {
@@ -142,6 +143,7 @@
     "character": "doctor",
     "type": "ending",
     "condition": "default",
+    "image": "assets/images/doctor_ending_default.png",
     "text": "You kept your head down, prioritizing your career and safety. You survived the upheaval, but the faces of those you couldn't help will linger in your memory for years."
   },
   {
@@ -149,6 +151,7 @@
     "character": "doctor",
     "type": "ending",
     "condition": "helped>=2",
+    "image": "assets/images/doctor_ending_impact.png",
     "text": "Your tireless actions saved countless lives. It wasn't easy, and you faced enormous pressure, but your quiet resistance made a profound difference in the lives of the protesters."
   },
   {
@@ -156,6 +159,7 @@
     "character": "doctor",
     "type": "ending",
     "condition": "risk>=3",
+    "image": "assets/images/doctor_ending_cost.png",
     "text": "The massive risks you took caught up with you. You faced interrogation and your license was temporarily suspended, paying a severe professional price for standing by your principles."
   }
 ]

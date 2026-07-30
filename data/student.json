@@ -3,6 +3,7 @@
     "id": "student_intro",
     "character": "student",
     "type": "intro",
+    "image": "assets/images/student_intro.png",
     "text": "You are Farhan, a third-year undergraduate student at Dhaka University. Your life usually revolves around attending lectures, studying for exams in the library, and hanging out with friends at the campus TSC. As the eldest son, you carry the heavy expectation of graduating and securing a good job to support your family. But as tensions on campus reach a boiling point, your ordinary routine is about to be shattered."
   },
   {
@@ -142,6 +143,7 @@
     "character": "student",
     "type": "ending",
     "condition": "default",
+    "image": "assets/images/student_ending_default.png",
     "text": "You kept your head down and focused on your safety. When the dust settled, you were alive and unharmed, but you couldn't help feeling you had watched a defining moment in your nation's history from the sidelines."
   },
   {
@@ -149,6 +151,7 @@
     "character": "student",
     "type": "ending",
     "condition": "helped>=2",
+    "image": "assets/images/student_ending_impact.png",
     "text": "Your contributions, big and small, helped sustain the movement. You stood shoulder to shoulder with your peers, playing a vital role in securing a new dawn for the nation."
   },
   {
@@ -156,6 +159,7 @@
     "character": "student",
     "type": "ending",
     "condition": "risk>=3",
+    "image": "assets/images/student_ending_cost.png",
     "text": "You were on the front lines, risking everything. You suffered injuries and faced detainment, paying a heavy personal price for the revolution's ultimate success. Your scars tell the story of a nation's freedom."
   }
 ]

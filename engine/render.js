@@ -23,10 +23,15 @@ const Render = {
     introScreen(node, onNext) {
         this.clear();
         const text = node ? node.text : 'Error loading intro.';
+        
+        const imgHtml = (node && node.image) 
+            ? `<img src="${node.image}" class="scene-image" alt="Intro Image" onerror="this.outerHTML='<div class=\\'image-fallback\\'>Introduction</div>'">` 
+            : `<div class="image-fallback">Introduction</div>`;
+
         this.root.innerHTML = `
             <div class="screen">
                 <div class="scene-image-container">
-                    <div class="image-fallback">Introduction</div>
+                    ${imgHtml}
                 </div>
                 <div class="dialogue-panel">
                     <h2 class="character-name-display">PROLOGUE</h2>
@@ -75,6 +80,10 @@ const Render = {
         const char = (node && node.character) ? node.character : 'character';
         const charName = char.toUpperCase();
         
+        const imgHtml = (node && node.image) 
+            ? `<img src="${node.image}" class="scene-image" alt="${charName} Intro Image" onerror="this.outerHTML='<div class=\\'image-fallback\\'>${charName}</div>'">` 
+            : `<div class="image-fallback">${charName}</div>`;
+
         let locationStr = "Dhaka";
         if (char === 'doctor') locationStr = "Dhaka Medical College";
         if (char === 'student') locationStr = "Dhaka University Campus";
@@ -83,7 +92,7 @@ const Render = {
         this.root.innerHTML = `
             <div class="screen">
                 <div class="scene-image-container">
-                    <div class="image-fallback">${charName}</div>
+                    ${imgHtml}
                 </div>
                 <div class="dialogue-panel">
                     <h2 class="character-name-display">${charName}</h2>

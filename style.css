@@ -57,6 +57,26 @@ body {
     }
 }
 
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.1), 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.1), 0 5px 25px rgba(168, 58, 58, 0.4);
+    }
+}
+
 .screen {
     width: 100%;
     display: flex;
@@ -81,20 +101,25 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>') opacity(0.05),
-        radial-gradient(circle at center, #1a1e29 0%, #0d0f14 100%);
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.03"/></svg>'),
+        linear-gradient(to bottom, rgba(10,6,8,0.5) 0%, rgba(10,6,8,0.85) 100%),
+        radial-gradient(circle at center, rgba(26,30,41,0.2) 0%, rgba(13,15,20,0.8) 100%),
+        url('assets/images/global_intro.png');
+    background-size: auto, auto, auto, cover;
+    background-position: center;
     z-index: -1;
+    animation: kenBurns 25s linear infinite alternate;
 }
 
 .title-screen .content-wrapper {
-    background: var(--dialogue-bg);
+    background: rgba(20, 20, 24, 0.65);
     padding: 4rem;
     border-radius: 8px;
     border: var(--pixel-border);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
     text-align: center;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .main-title {
@@ -114,6 +139,16 @@ body {
     font-style: italic;
 }
 
+.title-screen .main-title {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+.title-screen .subtitle {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out 0.3s forwards;
+}
+
 /* Buttons */
 .btn-primary {
     font-family: var(--font-pixel);
@@ -126,6 +161,7 @@ body {
     box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.1), 0 5px 15px rgba(0, 0, 0, 0.5);
     transition: all 0.2s ease;
     text-transform: uppercase;
+    animation: pulseGlow 2.5s ease-in-out infinite;
 }
 
 .btn-primary:hover {
@@ -133,6 +169,7 @@ body {
     transform: translateY(-2px);
     box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.5), inset 2px 2px 0px rgba(255, 255, 255, 0.1), 0 8px 20px rgba(168, 58, 58, 0.2);
     border-color: var(--accent-red);
+    animation: none;
 }
 
 .btn-primary:active {

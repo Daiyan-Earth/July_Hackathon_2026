@@ -1,6 +1,22 @@
 const Render = {
     root: null,
 
+    choiceIconSvg(choice) {
+        const helpedDelta = Number(choice && choice.state_effect ? choice.state_effect.helped : 0);
+        const iconType = helpedDelta > 0 ? 'heart' : 'shield';
+        const path = iconType === 'heart'
+            ? 'M12 20.3l-1.1-1C5.8 14.7 2.5 11.7 2.5 8A4.5 4.5 0 0 1 7 3.5c1.7 0 3.3.9 4.1 2.3A4.9 4.9 0 0 1 15.4 3.5 4.5 4.5 0 0 1 20 8c0 3.7-3.3 6.7-8.4 11.3l-.6 1z'
+            : 'M12 3l7 3v5.2c0 4.2-2.8 8.1-7 9.8-4.2-1.7-7-5.6-7-9.8V6l7-3zm0 2.3L7 7.4v3.8c0 3.1 1.9 6 5 7.4 3.1-1.4 5-4.3 5-7.4V7.4l-5-2.1z';
+
+        return `
+            <span class="choice-icon choice-icon-${iconType}" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="${path}"></path>
+                </svg>
+            </span>
+        `;
+    },
+
     clear() {
         if (this.root) this.root.innerHTML = '';
     },
@@ -107,6 +123,7 @@ const Render = {
             
         const choicesHtml = (node && node.choices) ? node.choices.map((c, idx) => `
             <button class="choice-btn" data-idx="${idx}">
+                ${this.choiceIconSvg(c)}
                 <span class="choice-label">${c.label}</span>
             </button>
         `).join('') : '';

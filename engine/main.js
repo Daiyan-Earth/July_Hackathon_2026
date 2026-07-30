@@ -7,6 +7,17 @@ const AppState = {
     state: { risk: 0, helped: 0 }
 };
 
+function initializeQuoteCards() {
+    const quotes = [
+        '"By lantern light, we learned which doors opened quietly and which streets remembered our footsteps."',
+        '"When the city held its breath, even a cup of water passed hand to hand felt like a promise."'
+    ];
+
+    document.querySelectorAll('.quote-card p').forEach((quoteEl, index) => {
+        if (quotes[index]) quoteEl.textContent = quotes[index];
+    });
+}
+
 async function renderCurrentScreen() {
     console.log("Current state:", AppState);
     
@@ -114,6 +125,7 @@ async function renderCurrentScreen() {
 
 // Start app
 window.addEventListener('DOMContentLoaded', () => {
+    initializeQuoteCards();
     Render.root = document.getElementById('app');
     renderCurrentScreen();
 });

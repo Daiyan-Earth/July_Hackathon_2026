@@ -418,7 +418,9 @@ body::after {
     cursor: pointer;
     transition: all 0.2s ease;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-height: 5rem;
 }
 
 .choice-btn:hover {
@@ -437,6 +439,36 @@ body::after {
     font-family: var(--font-pixel);
     font-size: 1.5rem;
     color: var(--text-cream);
+    line-height: 1.1;
+}
+
+.choice-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    flex: 0 0 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+    background: rgba(244, 236, 216, 0.06);
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45);
+}
+
+.choice-icon svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    fill: currentColor;
+}
+
+.choice-icon-heart {
+    color: var(--accent-red);
+    background: rgba(168, 58, 58, 0.16);
+}
+
+.choice-icon-shield {
+    color: #8fa3b8;
+    background: rgba(100, 121, 145, 0.16);
 }
 
 /* Consequence & Ending specific */
@@ -675,6 +707,7 @@ body::after {
 .main-content {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .app-frame {
@@ -693,6 +726,8 @@ body::after {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    min-width: 0;
 }
 
 /* Responsive adjustments */
@@ -719,14 +754,30 @@ body::after {
             0 -4px 0 0 #3a3b4c,
             0 4px 0 0 #3a3b4c;
         margin: 4px;
+        order: 1;
     }
 
     .sidebar-left {
         display: none;
+        order: 2;
+    }
+
+    .main-content {
+        order: 3;
+        width: 100%;
     }
 
     .sidebar-toggle-checkbox:checked ~ .sidebar-left {
         display: flex;
+    }
+
+    .sidebar-right {
+        order: 4;
+        width: 100%;
+    }
+
+    #app {
+        min-width: 0;
     }
 
     .scene-image-container {
@@ -759,6 +810,19 @@ body::after {
 
     .choice-btn {
         padding: 1rem;
+        gap: 0.75rem;
+        min-height: 4.5rem;
+    }
+
+    .choice-icon {
+        width: 2rem;
+        height: 2rem;
+        flex-basis: 2rem;
+    }
+
+    .choice-icon svg {
+        width: 1.15rem;
+        height: 1.15rem;
     }
 
     .epilogue-card {

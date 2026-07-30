@@ -27,8 +27,9 @@ async function renderCurrentScreen() {
     const phaseTextEl = document.querySelector('.phase-text');
     const dots = document.querySelectorAll('.dot-indicators .dot');
 
-    if (riskEl) riskEl.textContent = AppState.state.risk;
-    if (helpedEl) helpedEl.textContent = AppState.state.helped;
+    const hasCharacterStarted = Boolean(AppState.character);
+    if (riskEl) riskEl.textContent = hasCharacterStarted ? AppState.state.risk : '--';
+    if (helpedEl) helpedEl.textContent = hasCharacterStarted ? AppState.state.helped : '--';
     
     if (phaseTextEl) phaseTextEl.textContent = `Phase ${Math.min(AppState.phase, 4)} of 4`;
 

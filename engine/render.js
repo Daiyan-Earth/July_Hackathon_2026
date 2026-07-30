@@ -53,17 +53,17 @@ const Render = {
                 <h2 class="character-select-title">SELECT YOUR PATH</h2>
                 <div class="character-grid">
                     <div class="save-slot-card" data-char="doctor">
-                        <div class="portrait-placeholder">🩺</div>
+                        <div class="portrait-placeholder"><img src="assets/images/doctor_portrait.png" style="width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated;" onerror="this.outerHTML='🩺'"></div>
                         <h3 class="save-slot-title">DOCTOR</h3>
                         <div class="save-slot-desc">Emergency Physician</div>
                     </div>
                     <div class="save-slot-card" data-char="student">
-                        <div class="portrait-placeholder">🎓</div>
+                        <div class="portrait-placeholder"><img src="assets/images/student_portrait.png" style="width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated;" onerror="this.outerHTML='🎓'"></div>
                         <h3 class="save-slot-title">STUDENT</h3>
                         <div class="save-slot-desc">Undergraduate Protestor</div>
                     </div>
                     <div class="save-slot-card" data-char="rickshaw">
-                        <div class="portrait-placeholder">🚲</div>
+                        <div class="portrait-placeholder"><img src="assets/images/rickshaw_portrait.png" style="width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated;" onerror="this.outerHTML='🚲'"></div>
                         <h3 class="save-slot-title">RICKSHAW PULLER</h3>
                         <div class="save-slot-desc">Navigating the Streets</div>
                     </div>

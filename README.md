@@ -25,8 +25,8 @@ The game uses a strict JSON schema for narratives. Each character has an `intro`
 
 ## Tech Stack & AI Tools Used
 - HTML/CSS/JS (Vanilla, zero-dependencies)
-- Gemini 3.1 Pro (High) - Code architecture and generation
-- AI Image Tool - Asset generation (TBD)
+- Antigravity: Gemini 3.1 Pro (High) - Code architecture and generation
+- AI Image Tool - Asset generation
 
 ## Sources
 Historical references to be added in Epilogue.
@@ -35,5 +35,4 @@ Historical references to be added in Epilogue.
 MIT
 
 ## Team
-- Antigravity (AI Assistant)
-- User (Director)
+- Daiyan Khandaker

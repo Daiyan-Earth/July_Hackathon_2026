@@ -78,7 +78,7 @@ const Render = {
     characterIntroScreen(node, onNext) {
         this.clear();
         const char = (node && node.character) ? node.character : 'character';
-        const charName = char.toUpperCase();
+        const charName = char === 'rickshaw' ? 'RICKSHAW PULLER' : char.toUpperCase();
         
         const imgHtml = (node && node.image) 
             ? `<img src="${node.image}" class="scene-image" alt="${charName} Intro Image" onerror="this.outerHTML='<div class=\\'image-fallback\\'>${charName}</div>'">` 
@@ -121,7 +121,7 @@ const Render = {
         `).join('') : '';
 
         const char = typeof AppState !== 'undefined' && AppState.character ? AppState.character : 'character';
-        const charName = char.toUpperCase();
+        const charName = char === 'rickshaw' ? 'RICKSHAW PULLER' : char.toUpperCase();
         const phase = typeof AppState !== 'undefined' && AppState.phase ? AppState.phase : 1;
         const dateStr = (node && node.date) ? node.date : ((14 + phase) + " July 2024");
         let locationStr = "Dhaka";

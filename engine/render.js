@@ -1,8 +1,83 @@
 const Render = {
     root: null,
+    _keyHandler: null,
 
     clear() {
         if (this.root) this.root.innerHTML = '';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Remove previous keyboard listener
+        if (this._keyHandler) {
+            document.removeEventListener('keydown', this._keyHandler);
+            this._keyHandler = null;
+        }
+    },
+
+    /**
+     * Typewriter-style text reveal for narration blocks.
+     * Inserts text word-by-word for readability.
+     */
+    _typewriter(element, text, speed = 18) {
+        const words = text.split(' ');
+        element.textContent = '';
+        element.style.opacity = '1';
+        let i = 0;
+        const interval = setInterval(() => {
+            if (i < words.length) {
+                element.textContent += (i > 0 ? ' ' : '') + words[i];
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, speed);
+        // Store reference to allow skip
+        element._twInterval = interval;
+        element._twWords = words;
+        element._twIndex = () => i;
+        element._twSkip = () => {
+            clearInterval(interval);
+            element.textContent = text;
+        };
+    },
+
+    /**
+     * Bind keyboard shortcuts. Call after rendering a screen.
+     * actions: { continue: fn, choices: [fn, fn, ...] }
+     */
+    _bindKeys(actions) {
+        this._keyHandler = (e) => {
+            // Skip typewriter on any key during typing
+            const narration = document.querySelector('.narration-content');
+            if (narration && narration._twSkip && narration._twIndex && narration._twIndex() < (narration._twWords ? narration._twWords.length : 0)) {
+                narration._twSkip();
+                return;
+            }
+
+            if (actions.continue && (e.key === 'Enter' || e.key === ' ')) {
+                e.preventDefault();
+                actions.continue();
+            }
+            if (actions.choices) {
+                const num = parseInt(e.key);
+                if (num >= 1 && num <= actions.choices.length) {
+                    e.preventDefault();
+                    actions.choices[num - 1]();
+                }
+            }
+        };
+        document.addEventListener('keydown', this._keyHandler);
+    },
+
+    /**
+     * Generate a progress bar for story phases (4 phases total).
+     */
+    _progressBar(currentPhase, totalPhases = 4) {
+        let dots = '';
+        for (let i = 1; i <= totalPhases; i++) {
+            const cls = i < currentPhase ? 'progress-dot completed' :
+                        i === currentPhase ? 'progress-dot active' : 'progress-dot';
+            dots += `<span class="${cls}"></span>`;
+        }
+        return `<div class="progress-bar">${dots}</div>`;
     },
 
     titleScreen(onStart) {
@@ -44,6 +119,11 @@ const Render = {
             </div>
         `;
         document.getElementById('next-btn').onclick = onNext;
+        // Typewriter for intro narration
+        const narEl = document.querySelector('.narration-content');
+        if (narEl) this._typewriter(narEl, text);
+        // Keyboard: Enter/Space to continue
+        this._bindKeys({ continue: onNext });
     },
 
     characterSelectScreen(onSelect) {
@@ -105,6 +185,11 @@ const Render = {
             </div>
         `;
         document.getElementById('next-btn').onclick = onNext;
+        // Typewriter for character intro
+        const narEl = document.querySelector('.narration-content');
+        if (narEl && node) this._typewriter(narEl, node.text || '');
+        // Keyboard
+        this._bindKeys({ continue: onNext });
     },
 
     phaseScreen(node, onChoice) {
@@ -116,6 +201,7 @@ const Render = {
             
         const choicesHtml = (node && node.choices) ? node.choices.map((c, idx) => `
             <button class="choice-btn" data-idx="${idx}">
+                <span class="choice-key-hint">${idx + 1}</span>
                 <span class="choice-label">${c.label}</span>
             </button>
         `).join('') : '';
@@ -131,26 +217,36 @@ const Render = {
 
         this.root.innerHTML = `
             <div class="screen">
+                ${this._progressBar(phase)}
                 <div class="scene-image-container">
                     ${imgHtml}
                 </div>
                 <div class="dialogue-panel">
                     <h2 class="character-name-display">${charName}</h2>
                     <div class="metadata-display">📍 ${locationStr} • 🗓 ${dateStr}</div>
-                    <div class="narration-content">${node ? node.text : 'Error loading phase.'}</div>
+                    <div class="narration-content"></div>
                 </div>
                 <div class="choices-panel">
                     ${choicesHtml}
                 </div>
             </div>
         `;
+
+        // Typewriter for phase narration
+        const narEl = document.querySelector('.narration-content');
+        if (narEl && node) this._typewriter(narEl, node.text || '');
         
+        const choiceFns = [];
         document.querySelectorAll('.choices-panel button').forEach(btn => {
-            btn.onclick = () => {
+            const fn = () => {
                 const choice = node.choices[btn.dataset.idx];
                 onChoice(choice);
             };
+            btn.onclick = fn;
+            choiceFns.push(fn);
         });
+        // Keyboard: 1/2 for choices
+        this._bindKeys({ choices: choiceFns });
     },
 
     consequenceScreen(consequence, onContinue) {
@@ -178,6 +274,11 @@ const Render = {
         `;
         
         document.getElementById('continue-btn').onclick = onContinue;
+        // Typewriter for consequence
+        const narEl = document.querySelector('.narration-content');
+        if (narEl) this._typewriter(narEl, textHtml);
+        // Keyboard: Enter/Space to continue
+        this._bindKeys({ continue: onContinue });
     },
 
     endingScreen(node, onNext) {
@@ -203,6 +304,11 @@ const Render = {
             </div>
         `;
         document.getElementById('next-btn').onclick = onNext;
+        // Typewriter for ending text
+        const narEl = document.querySelector('.narration-content');
+        if (narEl && node) this._typewriter(narEl, node.text || '');
+        // Keyboard
+        this._bindKeys({ continue: onNext });
     },
 
     epilogueScreen(node, onRestart) {
@@ -231,5 +337,7 @@ const Render = {
             </div>
         `;
         document.getElementById('restart-btn').onclick = onRestart;
+        // Keyboard
+        this._bindKeys({ continue: onRestart });
     }
 };

@@ -561,7 +561,7 @@ body {
 @media (max-width: 768px) {
     .scene-image-container {
         height: 40vh;
-        border-radius: 0;
+        border-radius: 8px;
     }
 
     .screen {
@@ -569,30 +569,92 @@ body {
         gap: 1rem;
     }
 
-    .dialogue-panel {
-        padding: 1.5rem;
-        margin-top: -1rem;
-        border-radius: 8px;
+    .title-screen .content-wrapper {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
     }
 
     .main-title {
         font-size: 3rem;
     }
 
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+        padding: 0.8rem 2rem;
+        font-size: 1.4rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .character-select-title {
+        font-size: 2.2rem;
+        margin-top: 1rem;
+    }
+
+    .save-slot-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .dialogue-panel {
+        padding: 1.5rem;
+        margin-top: -2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6), 0 0 8px rgba(192, 57, 43, 0.1);
+    }
+
     .character-name-display {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .metadata-display {
+        font-size: 0.85rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        margin-bottom: 1.5rem;
     }
 
     .narration-content {
         font-size: 18px;
+        line-height: 1.6;
     }
 
     .choice-btn {
         padding: 1rem;
     }
 
+    .choice-label {
+        font-size: 1.25rem;
+    }
+
+    .ending-title-display {
+        font-size: 2.5rem;
+    }
+
+    .ending-stats {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+
     .epilogue-card {
         padding: 1.5rem;
+    }
+
+    .epilogue-card h2 {
+        font-size: 2rem;
+    }
+    
+    .mute-btn {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
     }
 }
 

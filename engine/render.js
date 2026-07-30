@@ -123,7 +123,7 @@ const Render = {
         const char = typeof AppState !== 'undefined' && AppState.character ? AppState.character : 'character';
         const charName = char.toUpperCase();
         const phase = typeof AppState !== 'undefined' && AppState.phase ? AppState.phase : 1;
-        const dateStr = (14 + phase) + " July 2024";
+        const dateStr = (node && node.date) ? node.date : ((14 + phase) + " July 2024");
         let locationStr = "Dhaka";
         if (char === 'doctor') locationStr = "Dhaka Medical College";
         if (char === 'student') locationStr = "Dhaka University Campus";

@@ -10,6 +10,28 @@ const AppState = {
 async function renderCurrentScreen() {
     console.log("Current state:", AppState);
     
+    // Update the dashboard UI elements (if they exist in the DOM)
+    const riskEl = document.querySelector('.risk-val');
+    const helpedEl = document.querySelector('.helped-val');
+    const phaseTextEl = document.querySelector('.phase-text');
+    const dots = document.querySelectorAll('.dot-indicators .dot');
+
+    if (riskEl) riskEl.textContent = AppState.state.risk;
+    if (helpedEl) helpedEl.textContent = AppState.state.helped;
+    
+    if (phaseTextEl) phaseTextEl.textContent = `Phase ${Math.min(AppState.phase, 4)} of 4`;
+
+    if (dots.length > 0) {
+        dots.forEach((dot, index) => {
+            // Activate dots up to the current phase
+            if (index < AppState.phase) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+    
     switch (AppState.screen) {
         case "TITLE":
             Render.titleScreen(() => {

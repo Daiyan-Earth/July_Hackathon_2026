@@ -10,7 +10,78 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app"></div>
+    <div class="dashboard-layout">
+        <!-- Sidebar Toggle (Mobile) -->
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+        <label for="sidebar-toggle" class="sidebar-toggle-label">☰ MENU</label>
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar-left">
+            <div class="sidebar-header">
+                <h1 class="logo-title">JULY REVOLUTION<br><span class="logo-subtitle">ECHOES OF JULY</span></h1>
+            </div>
+            
+            <nav class="nav-list">
+                <div class="nav-item active">
+                    <span class="nav-icon">📖</span> Story
+                </div>
+                <div class="nav-item disabled">
+                    <span class="nav-icon">👥</span> Characters
+                </div>
+                <div class="nav-item disabled">
+                    <span class="nav-icon">📜</span> History
+                </div>
+                <div class="nav-item disabled">
+                    <span class="nav-icon">🎬</span> Credits
+                </div>
+                <div class="nav-item disabled">
+                    <span class="nav-icon">⚙️</span> Settings
+                </div>
+            </nav>
+
+            <div class="quote-card placeholder-quote">
+                <p>"Placeholder text for the left sidebar quote card. I'll fill this in later."</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="app-frame">
+                <div id="app"></div>
+            </div>
+        </main>
+
+        <!-- Right Panel -->
+        <aside class="sidebar-right">
+            <div class="status-card">
+                <h3 class="panel-heading">STATUS</h3>
+                <div class="stat-row">
+                    <span class="stat-label">Risk Level</span>
+                    <span class="stat-value risk-val">--</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Helped</span>
+                    <span class="stat-value helped-val">--</span>
+                </div>
+            </div>
+
+            <div class="progress-card">
+                <h3 class="panel-heading">PROGRESS</h3>
+                <div class="phase-text">Phase 1 of 4</div>
+                <div class="dot-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="quote-card placeholder-quote bottom-quote">
+                <p>"Placeholder text for the right panel quote card. I'll fill this in later."</p>
+            </div>
+        </aside>
+    </div>
+
     <script src="engine/StoryEngine.js"></script>
     <script src="engine/render.js"></script>
     <script src="engine/main.js"></script>

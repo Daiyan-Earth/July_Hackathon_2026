@@ -463,3 +463,29 @@ body {
         padding: 1.5rem;
     }
 }
+
+/* Audio Mute Button */
+.mute-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: #1a1a24;
+    border: var(--pixel-border);
+    color: var(--text-cream);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+}
+
+.mute-btn:hover {
+    background: var(--hover-bright);
+    transform: scale(1.05);
+    border-color: var(--accent-red);
+}

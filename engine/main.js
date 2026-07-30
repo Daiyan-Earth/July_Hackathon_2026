@@ -1,5 +1,73 @@
 const engine = new StoryEngine();
 
+const AudioController = {
+    ambient: new Audio('assets/audio/ambient.mp3'),
+    click: new Audio('assets/audio/choice-click.mp3'),
+    isMuted: false,
+
+    init() {
+        this.ambient.loop = true;
+        this.ambient.volume = 0.3;
+        this.click.volume = 0.3;
+        this.setupGlobalClickListener();
+    },
+
+    playAmbient() {
+        if (!this.isMuted) {
+            const playPromise = this.ambient.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(e => console.warn("Ambient audio play failed:", e));
+            }
+        }
+    },
+
+    playClick() {
+        if (!this.isMuted) {
+            this.click.currentTime = 0;
+            const playPromise = this.click.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(e => console.warn("Click audio play failed:", e));
+            }
+        }
+    },
+
+    toggleMute() {
+        this.isMuted = !this.isMuted;
+        if (this.isMuted) {
+            this.ambient.pause();
+        } else {
+            if (AppState.screen !== 'TITLE') {
+                this.playAmbient();
+            }
+        }
+        const btn = document.getElementById('mute-btn');
+        if (btn) {
+            btn.innerHTML = this.isMuted ? '🔇' : '🔊';
+        }
+    },
+    
+    setupMuteButton() {
+        if (!document.getElementById('mute-btn')) {
+            const btn = document.createElement('button');
+            btn.id = 'mute-btn';
+            btn.className = 'mute-btn';
+            btn.innerHTML = this.isMuted ? '🔇' : '🔊';
+            btn.onclick = () => this.toggleMute();
+            document.body.appendChild(btn);
+        }
+    },
+
+    setupGlobalClickListener() {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.choices-panel button')) {
+                this.playClick();
+            }
+        });
+    }
+};
+
+AudioController.init();
+
 const AppState = {
     screen: "TITLE",
     character: null,
@@ -13,6 +81,7 @@ async function renderCurrentScreen() {
     switch (AppState.screen) {
         case "TITLE":
             Render.titleScreen(() => {
+                AudioController.playAmbient();
                 AppState.screen = "INTRO";
                 renderCurrentScreen();
             });
@@ -93,5 +162,6 @@ async function renderCurrentScreen() {
 // Start app
 window.addEventListener('DOMContentLoaded', () => {
     Render.root = document.getElementById('app');
+    AudioController.setupMuteButton();
     renderCurrentScreen();
 });

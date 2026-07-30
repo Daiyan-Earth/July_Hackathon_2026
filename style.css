@@ -222,7 +222,21 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: kenBurns 20s linear infinite alternate;
+    animation: kenBurns 20s linear infinite alternate, imgFadeIn 0.5s ease-out;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+@keyframes imgFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Vignette & Overlay */
